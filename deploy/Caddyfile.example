@@ -1,0 +1,7 @@
+www.werkskante.de {
+	reverse_proxy 127.0.0.1:3000
+}
+
+werkskante.de {
+	redir https://www.werkskante.de{uri} permanent
+}

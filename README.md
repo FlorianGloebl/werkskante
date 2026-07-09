@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Werkskante – Website
 
-## Getting Started
+Werkskante | Arbeitssicherheit & schlanke Prozesse im Mittelstand.
+Next.js (App Router) + TypeScript + Tailwind CSS + Framer Motion.
 
-First, run the development server:
+## Projektstruktur
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+src/
+  app/                 Routen (Startseite, Impressum, Datenschutz, API, SEO-Dateien)
+  components/
+    ui/                Basiskomponenten (Button, Container, Logo, Edge-Motiv, …)
+    layout/            Header, Footer
+    sections/          Startseiten-Abschnitte (Hero, Ansatz, Leistungen, …)
+    interactive/        Interaktive Module (Werkskante-Check, Kompass, Sticky-CTA, …)
+  content/             Content als typisierte TS-Dateien (Team, Leistungen, Referenzen, …)
+  types/               Datenmodell (TeamMember, Service, Reference, ContactInquiry, …)
+  lib/                 Validierung (zod-Schema für das Kontaktformular)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Inhalte (Team, Leistungen, Referenzen, Site-Settings) liegen aktuell als strukturierte
+TypeScript-Dateien in `src/content/`. Die Typen in `src/types/content.ts` sind bewusst so
+modelliert, dass sie 1:1 auf ein späteres CMS/Datenbankschema übertragbar sind (siehe
+„Migration zu CMS/Datenbank“ unten).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Lokale Entwicklung
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Voraussetzung: Node.js 20+.
 
-## Learn More
+```bash
+npm install
+cp .env.example .env   # SMTP-Zugangsdaten eintragen (optional für lokale Entwicklung)
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Die Seite läuft dann unter [http://localhost:3000](http://localhost:3000).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Ohne gesetzte `SMTP_HOST` wird jede Kontaktanfrage nur in die Server-Logs geschrieben –
+so lässt sich das Formular lokal testen, ohne echte Mails zu versenden.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Nützliche Skripte
 
-## Deploy on Vercel
+```bash
+npm run dev      # Entwicklungsserver
+npm run build    # Produktions-Build
+npm run start    # Produktions-Server (nach Build)
+npm run lint     # ESLint
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Kontaktformular
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Validierung über `zod` (`src/lib/validation.ts`), serverseitig erneut geprüft in
+  `src/app/api/contact/route.ts`.
+- Spam-Schutz: unsichtbares Honeypot-Feld (`website`) sowie ein einfaches
+  IP-basiertes Rate-Limit (5 Anfragen/Minute).
+- Versand per SMTP (`nodemailer`), sobald `SMTP_HOST` gesetzt ist. Für produktiven
+  Betrieb SPF/DKIM/DMARC für die Mail-Domain einrichten.
+
+## Deployment auf Hetzner (Docker)
+
+1. **Server vorbereiten**: Hetzner Cloud VPS (Ubuntu/Debian), Docker + Docker Compose
+   installieren, Firewall so konfigurieren, dass nur 80/443 (öffentlich) und SSH
+   (eingeschränkt) erreichbar sind.
+
+2. **Code auf den Server bringen** (z. B. `git clone` oder Deployment via CI/CD).
+
+3. **Umgebungsvariablen setzen**:
+
+   ```bash
+   cp .env.example .env
+   # SMTP-Zugangsdaten und Empfänger-Adresse eintragen
+   ```
+
+4. **Bauen & starten**:
+
+   ```bash
+   docker compose up -d --build
+   ```
+
+   Der Next.js-Server läuft danach nur auf `127.0.0.1:3000` – öffentlich erreichbar wird
+   er über einen Reverse Proxy.
+
+5. **Reverse Proxy & SSL**: Ein Beispiel für Caddy (automatisches Let's Encrypt-SSL)
+   liegt unter `deploy/Caddyfile.example`. Alternativ kann Nginx + Certbot verwendet
+   werden. Datei nach `/etc/caddy/Caddyfile` kopieren und Domain anpassen.
+
+6. **DNS**: A-Records für `werkskante.de` und `www.werkskante.de` auf die Server-IP
+   setzen. Mail-DNS (MX/SPF/DKIM/DMARC) separat und sauber konfigurieren.
+
+7. **Updates ausrollen**:
+
+   ```bash
+   git pull
+   docker compose up -d --build
+   ```
+
+## Roadmap: was später ins CMS/Backend wandern sollte
+
+Phase 1 nutzt bewusst lokale Content-Dateien, um den Prototyp schlank zu halten. Das
+Datenmodell in `src/types/content.ts` ist so gebaut, dass folgende Bereiche später ohne
+Strukturbruch in ein CMS/eine Datenbank (z. B. PostgreSQL + Prisma, oder ein Headless-CMS
+wie Payload/Directus/Strapi) migriert werden können:
+
+- **Team** (`TeamMember`) – Profile, Reihenfolge, Sichtbarkeit
+- **Leistungen** (`Service`, `BusinessUnit`) – Leistungsbeschreibungen, Kategorien
+- **Referenzen** (`Reference`) – erst nach Freigabe sichtbar (`approved`/`visible`)
+- **Kontaktanfragen** (`ContactInquiry`) – aktuell nur per Mail versendet, künftig
+  persistiert und mit Status-Workflow (`new` → `contacted` → `qualified` → `closed`)
+- **Site-Settings** (`SiteSettings`) – Meta-Daten, Kontaktdaten, Rechtstexte
+
+Bis dahin gilt: Inhalte in `src/content/*.ts` pflegen, Typen in `src/types/content.ts`
+nicht ohne Migrationsplan ändern.
+
+## Rechtliches
+
+`src/app/impressum` und `src/app/datenschutz` enthalten Platzhalter-Texte. Vor Launch
+durch rechtlich geprüfte Inhalte ersetzen.
