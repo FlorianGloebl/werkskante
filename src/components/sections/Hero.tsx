@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
@@ -8,8 +9,26 @@ import { siteSettings } from "@/content/site";
 export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden bg-ink pt-32 pb-28 text-white sm:pt-40">
+      <Image
+        src="/images/hero-industrial-edge.jpg"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+      />
+
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.06]"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(100deg, #05070A 8%, rgba(6,20,38,0.92) 38%, rgba(6,20,38,0.55) 68%, rgba(6,20,38,0.35) 100%)",
+        }}
+        aria-hidden="true"
+      />
+
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.05]"
         style={{
           backgroundImage:
             "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",

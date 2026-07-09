@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Edge } from "@/components/ui/Edge";
 
@@ -13,6 +14,15 @@ export function WhatIsWerkskante() {
     <section className="bg-mist py-24 sm:py-32">
       <Container className="grid gap-12 lg:grid-cols-12">
         <div className="lg:col-span-5">
+          <div className="relative mb-8 aspect-4/3 overflow-hidden rounded-sm">
+            <Image
+              src="/images/technician-inspection.jpg"
+              alt="Techniker bei der genauen Prüfung einer Maschine"
+              fill
+              sizes="(min-width: 1024px) 40vw, 90vw"
+              className="object-cover"
+            />
+          </div>
           <span className="mb-4 inline-block text-xs font-semibold tracking-[0.2em] text-accent uppercase">
             Was bedeutet Werkskante?
           </span>

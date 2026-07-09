@@ -111,6 +111,17 @@ wie Payload/Directus/Strapi) migriert werden können:
 Bis dahin gilt: Inhalte in `src/content/*.ts` pflegen, Typen in `src/types/content.ts`
 nicht ohne Migrationsplan ändern.
 
+## Bildmaterial
+
+Die Fotos in `public/images/` sind lizenzfreie Pexels-Platzhalter (Pexels-Lizenz: freie
+kommerzielle Nutzung, keine Namensnennung nötig), ausgewählt nach den Kriterien aus dem
+Master-Prompt (keine erkennbaren Marken/Logos, keine Sicherheitshelm-Klischees). Vor
+Launch durch eigene Betriebsfotos ersetzen:
+
+- `hero-industrial-edge.jpg` – Hero-Hintergrund
+- `technician-inspection.jpg` – „Was bedeutet Werkskante“
+- `rope-access-safety.jpg`, `warehouse-racking.jpg` – „Aus der Praxis“-Galerie
+
 ## Rechtliches
 
 `src/app/impressum` und `src/app/datenschutz` enthalten Platzhalter-Texte. Vor Launch
