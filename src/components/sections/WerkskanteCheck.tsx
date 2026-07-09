@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CheckQuiz } from "@/components/interactive/CheckQuiz";
@@ -7,6 +8,26 @@ export function WerkskanteCheck() {
   return (
     <section id="check" className="bg-mist py-24 sm:py-32">
       <Container className="flex flex-col gap-16">
+        <div className="relative aspect-21/9 overflow-hidden rounded-sm sm:aspect-[3/1]">
+          <Image
+            src="/images/check-inspection.jpg"
+            alt="Prüfung mit Checkliste in einer Lagerhalle"
+            fill
+            sizes="100vw"
+            className="object-cover"
+            style={{ objectPosition: "50% 30%" }}
+          />
+          <div
+            className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/40 to-transparent"
+            aria-hidden="true"
+          />
+          <div className="absolute inset-0 flex items-center">
+            <p className="max-w-md px-6 font-display text-xl font-semibold text-white sm:px-10 sm:text-2xl">
+              Kein Formular. Ein Termin bei Ihnen vor Ort.
+            </p>
+          </div>
+        </div>
+
         <SectionHeading
           eyebrow="Türöffner"
           title="Der kostenlose Werkskante-Check"

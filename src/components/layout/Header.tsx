@@ -21,7 +21,7 @@ export function Header() {
     <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-ink/95 backdrop-blur-sm">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 sm:px-8 lg:px-10">
         <Link href="#top" aria-label="Werkskante Startseite">
-          <Logo variant="light" className="scale-90 sm:scale-100" />
+          <Logo variant="light" className="h-6 w-auto sm:h-7" />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">

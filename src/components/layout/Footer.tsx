@@ -10,7 +10,7 @@ export function Footer() {
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-16 sm:px-8 lg:px-10">
         <div className="flex flex-col justify-between gap-8 sm:flex-row">
           <div className="max-w-sm">
-            <Logo variant="light" />
+            <Logo variant="light" className="h-7 w-auto" />
             <p className="mt-4 text-sm leading-relaxed">{siteSettings.mainClaim}</p>
           </div>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { contactTopics } from "@/lib/validation";
@@ -43,8 +44,25 @@ export function Contact() {
   }
 
   return (
-    <section id="kontakt" className="bg-ink py-24 text-white sm:py-32">
-      <Container className="grid gap-16 lg:grid-cols-12">
+    <section id="kontakt" className="relative overflow-hidden bg-ink py-24 text-white sm:py-32">
+      <Image
+        src="/images/hero-industrial-edge.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover"
+        style={{ objectPosition: "80% 40%" }}
+      />
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(260deg, #05070A 15%, rgba(6,20,38,0.94) 45%, rgba(6,20,38,0.9) 100%)",
+        }}
+        aria-hidden="true"
+      />
+
+      <Container className="relative grid gap-16 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <SectionHeading
             eyebrow="Kontakt"
