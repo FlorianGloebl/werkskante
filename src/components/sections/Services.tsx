@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ServiceFilter } from "@/components/interactive/ServiceFilter";
+import { PpeCheck } from "@/components/interactive/PpeCheck";
 import { services } from "@/content/services";
 
 export function Services() {
@@ -13,6 +14,7 @@ export function Services() {
           description="Von der Arbeitsschutz-Basis über Absturzsicherung und Prüfpflichten bis zu Schulungen und Prozessarbeit."
         />
         <ServiceFilter services={services} />
+        <PpeCheck />
       </Container>
     </section>
   );

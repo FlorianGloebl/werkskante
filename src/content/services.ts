@@ -5,6 +5,7 @@ export const services: Service[] = [
     id: "arbeitsschutz-basis",
     title: "Arbeitsschutz-Basis",
     slug: "arbeitsschutz-basis",
+    tagline: "Dokumentiert, nicht verstaubt.",
     shortDescription:
       "Gefährdungsbeurteilungen, Betriebsanweisungen und Unterweisungen, die im Alltag tragen.",
     longDescription:
@@ -25,6 +26,7 @@ export const services: Service[] = [
     id: "absturzsicherung",
     title: "Absturzsicherung & PSA gegen Absturz",
     slug: "absturzsicherung",
+    tagline: "Sicherung, die sitzt.",
     shortDescription:
       "Bewertung, Unterweisung und Organisation für Tätigkeiten mit Absturzrisiko.",
     longDescription:
@@ -44,6 +46,7 @@ export const services: Service[] = [
     id: "pruefpflichten",
     title: "Regalprüfungen & Prüfpflichten",
     slug: "regalpruefungen-pruefpflichten",
+    tagline: "Fristen im Griff, nicht im Kopf.",
     shortDescription:
       "Wiederkehrende Prüfungen organisiert, Fristen und Verantwortlichkeiten im Griff.",
     longDescription:
@@ -64,6 +67,7 @@ export const services: Service[] = [
     id: "schulungen",
     title: "Schulungen & Sicherheitskultur",
     slug: "schulungen-sicherheitskultur",
+    tagline: "Verstanden statt abgehakt.",
     shortDescription:
       "Schulungen, die verstanden werden – und eine Sicherheitskultur, die im Alltag lebt.",
     longDescription:
@@ -84,6 +88,7 @@ export const services: Service[] = [
     id: "prozesse-wertschoepfung",
     title: "Prozesse & Wertschöpfung",
     slug: "prozesse-wertschoepfung",
+    tagline: "Reibung sehen, bevor sie kostet.",
     shortDescription:
       "Prozessbeobachtung vor Ort – Lösungen, die Sicherheit und Wertschöpfung verbinden.",
     longDescription:

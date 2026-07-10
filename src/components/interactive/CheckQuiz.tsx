@@ -35,10 +35,10 @@ export function CheckQuiz() {
                     key={label}
                     type="button"
                     onClick={() => answer(q.id, value)}
-                    className={`rounded-sm px-4 py-2 text-sm font-semibold transition-colors ${
+                    className={`rounded-sm px-4 py-2 text-sm font-semibold outline-none transition-all ${
                       selected
-                        ? "bg-ink text-white"
-                        : "bg-mist text-ink/60 hover:bg-ink/10"
+                        ? "bg-ink text-white ring-2 ring-accent"
+                        : "bg-mist text-ink/60 hover:bg-ink/10 hover:ring-2 hover:ring-accent/60 focus-visible:ring-2 focus-visible:ring-accent"
                     }`}
                   >
                     {label}

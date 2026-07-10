@@ -1,6 +1,16 @@
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Edge } from "@/components/ui/Edge";
 import { team } from "@/content/team";
+
+function initials(name: string) {
+  return name
+    .split(" ")
+    .map((part) => part[0])
+    .slice(0, 2)
+    .join("")
+    .toUpperCase();
+}
 
 export function Team() {
   const members = team.filter((m) => m.visible).sort((a, b) => a.sortOrder - b.sortOrder);
@@ -20,7 +30,12 @@ export function Team() {
               key={member.id}
               className="flex flex-col gap-5 rounded-sm border border-ink/10 bg-white p-8"
             >
-              <div className="aspect-4/3 w-full rounded-sm bg-ink/5" aria-hidden="true" />
+              <div className="relative flex aspect-4/3 w-full flex-col justify-between overflow-hidden rounded-sm bg-ink p-6">
+                <span className="font-display text-5xl font-bold text-white/90">
+                  {initials(member.name)}
+                </span>
+                <Edge className="h-4 w-20 text-steel/70" />
+              </div>
               <div>
                 <h3 className="font-display text-xl font-bold text-ink">{member.name}</h3>
                 <p className="mt-1 text-sm font-semibold text-accent">{member.role}</p>

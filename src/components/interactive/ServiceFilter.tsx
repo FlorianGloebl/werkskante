@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { Service } from "@/types/content";
+import { ServiceIcon } from "@/components/ui/ServiceIcon";
 
 interface ServiceFilterProps {
   services: Service[];
@@ -33,10 +34,10 @@ export function ServiceFilter({ services }: ServiceFilterProps) {
             key={category}
             type="button"
             onClick={() => setActive(category)}
-            className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
+            className={`rounded-full px-4 py-2 text-sm font-semibold outline-none transition-all ${
               active === category
-                ? "bg-ink text-white"
-                : "bg-mist text-ink/60 hover:bg-ink/10"
+                ? "bg-ink text-white ring-2 ring-accent"
+                : "bg-mist text-ink/60 hover:bg-ink/10 hover:ring-2 hover:ring-accent/60 focus-visible:ring-2 focus-visible:ring-accent"
             }`}
           >
             {categoryLabels[category] ?? category}
@@ -48,9 +49,14 @@ export function ServiceFilter({ services }: ServiceFilterProps) {
         {visible.map((service) => (
           <div
             key={service.id}
-            className="flex flex-col gap-4 rounded-sm border border-ink/10 p-6 transition-colors hover:border-accent/40"
+            className="group flex flex-col gap-3 rounded-sm border-t-2 border-ink pt-6 ring-1 ring-transparent transition-all hover:-translate-y-1 hover:ring-ink/15"
           >
+            <ServiceIcon
+              name={service.icon}
+              className="h-7 w-7 text-ink transition-transform duration-300 group-hover:scale-110 group-hover:text-accent"
+            />
             <h3 className="font-display text-lg font-bold text-ink">{service.title}</h3>
+            <p className="font-display text-base font-semibold text-accent">{service.tagline}</p>
             <p className="text-sm leading-relaxed text-ink/70">{service.shortDescription}</p>
             <ul className="mt-2 flex flex-col gap-2">
               {service.bulletPoints.map((point) => (

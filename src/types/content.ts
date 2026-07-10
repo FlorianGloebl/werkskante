@@ -15,6 +15,7 @@ export interface Service {
   id: string;
   title: string;
   slug: string;
+  tagline: string;
   shortDescription: string;
   longDescription: string;
   bulletPoints: string[];
