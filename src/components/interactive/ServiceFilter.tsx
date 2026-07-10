@@ -49,7 +49,7 @@ export function ServiceFilter({ services }: ServiceFilterProps) {
         {visible.map((service) => (
           <div
             key={service.id}
-            className="group flex flex-col gap-3 rounded-sm border-t-2 border-ink pt-6 ring-1 ring-transparent transition-all hover:-translate-y-1 hover:ring-ink/15"
+            className="group flex flex-col gap-3 rounded-sm border border-ink/12 bg-white p-6 ring-1 ring-transparent transition-all hover:-translate-y-1 hover:border-accent/30 hover:shadow-lg hover:shadow-ink/5 hover:ring-2 hover:ring-accent/50"
           >
             <ServiceIcon
               name={service.icon}
