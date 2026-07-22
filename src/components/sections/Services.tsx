@@ -12,6 +12,7 @@ export function Services() {
           eyebrow="Leistungen"
           title="Fünf Bereiche, ein Prinzip: rechtlich passend und praxistauglich."
           description="Von der Arbeitsschutz-Basis über Absturzsicherung und Prüfpflichten bis zu Schulungen und Prozessarbeit."
+          wide
         />
         <ServiceFilter services={services} />
         <PpeCheck />

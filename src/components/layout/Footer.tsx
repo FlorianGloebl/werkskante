@@ -11,7 +11,9 @@ export function Footer() {
         <div className="flex flex-col justify-between gap-8 sm:flex-row">
           <div className="max-w-sm">
             <Logo variant="light" className="h-7 w-auto" />
-            <p className="mt-4 text-sm leading-relaxed">{siteSettings.mainClaim}</p>
+            <p className="mt-4 text-sm leading-relaxed">
+              {siteSettings.brandName} · {siteSettings.tagline}
+            </p>
           </div>
 
           <div className="grid grid-cols-2 gap-8 text-sm sm:grid-cols-3">
@@ -28,7 +30,11 @@ export function Footer() {
                 {siteSettings.contactEmail}
               </a>
               <span>{siteSettings.phone}</span>
-              <span>{siteSettings.address}</span>
+              <span className="flex flex-col">
+                <span>Werkskante</span>
+                <span>Birkenweg 6</span>
+                <span>84082 Laberweinting</span>
+              </span>
             </div>
             <div className="flex flex-col gap-3">
               <span className="font-semibold text-white">Rechtliches</span>

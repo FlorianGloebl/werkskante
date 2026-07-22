@@ -46,12 +46,11 @@ export function Contact() {
   return (
     <section id="kontakt" className="relative overflow-hidden bg-ink py-24 text-white sm:py-32">
       <Image
-        src="/images/hero-industrial-edge.jpg"
+        src="/images/contact-conversation-v2.jpg"
         alt=""
         fill
         sizes="100vw"
         className="object-cover"
-        style={{ objectPosition: "80% 40%" }}
       />
       <div
         className="pointer-events-none absolute inset-0"

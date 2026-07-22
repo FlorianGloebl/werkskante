@@ -36,7 +36,7 @@ export default function Image() {
           {siteSettings.mainClaim}
         </div>
         <div style={{ display: "flex", marginTop: 32, fontSize: 28, color: "#ffffffb3" }}>
-          Arbeitssicherheit &amp; schlanke Prozesse im Mittelstand
+          Wir für den Mittelstand
         </div>
       </div>
     ),

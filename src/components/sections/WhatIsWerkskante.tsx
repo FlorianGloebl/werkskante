@@ -14,8 +14,8 @@ export function WhatIsWerkskante() {
       <Container className="grid gap-12 lg:grid-cols-12 lg:items-stretch">
         <div className="relative min-h-[320px] overflow-hidden rounded-sm lg:col-span-5">
           <Image
-            src="/images/technician-inspection.jpg"
-            alt="Techniker bei der genauen Prüfung einer Maschine"
+            src="/images/whatis-modern.jpg"
+            alt="Techniker bei der Verdrahtung eines Schaltschranks"
             fill
             sizes="(min-width: 1024px) 40vw, 90vw"
             className="object-cover"
@@ -35,9 +35,10 @@ export function WhatIsWerkskante() {
 
           <div className="flex flex-col divide-y divide-ink/10 border-t border-ink/10">
             {statements.map((statement) => (
-              <p key={statement} className="py-4 text-lg leading-snug font-medium text-ink/85">
-                {statement}
-              </p>
+              <div key={statement} className="flex items-start gap-3 py-4">
+                <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                <p className="text-lg leading-snug font-medium text-ink/85">{statement}</p>
+              </div>
             ))}
           </div>
         </div>

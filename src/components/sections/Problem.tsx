@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
+import { ServiceIcon } from "@/components/ui/ServiceIcon";
 import { problemPoints } from "@/content/approach";
 
 export function Problem() {
@@ -27,16 +31,21 @@ export function Problem() {
           Umsetzung.
         </h2>
 
-        <div className="mt-14 grid grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-4">
+        <div className="mt-14 grid grid-cols-2 gap-x-8 gap-y-8 sm:grid-cols-4">
           {problemPoints.map((point, i) => (
-            <div key={point} className="border-t border-white/15 pt-4">
-              <span className="text-xs font-semibold text-white/40">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <p className="mt-2 text-base leading-snug font-medium text-white/85">
-                {point}
+            <motion.div
+              key={point.id}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.5, delay: i * 0.06, ease: "easeOut" }}
+              className="border-t border-white/15 pt-4"
+            >
+              <ServiceIcon name={point.icon} className="h-6 w-6 text-steel" />
+              <p className="mt-3 text-base leading-snug font-medium text-white/85">
+                {point.text}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </Container>

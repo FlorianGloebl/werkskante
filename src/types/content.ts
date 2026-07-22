@@ -71,6 +71,7 @@ export interface SiteSettings {
   metaTitle: string;
   metaDescription: string;
   mainClaim: string;
+  tagline: string;
   contactEmail: string;
   phone: string;
   address: string;

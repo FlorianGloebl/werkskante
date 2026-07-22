@@ -79,6 +79,46 @@ const paths: Record<string, ReactNode> = {
       <path d="M8 8h4" />
     </>
   ),
+  papers: (
+    <>
+      <path d="M9 5h9a1 1 0 0 1 1 1v10" />
+      <rect x="5" y="8" width="11" height="12" rx="1" />
+      <path d="M8 12h5" />
+      <path d="M8 15.5h5" />
+    </>
+  ),
+  gap: (
+    <>
+      <path d="M4 9V6a2 2 0 0 1 2-2h3" />
+      <path d="M15 4h3a2 2 0 0 1 2 2v3" />
+      <path d="M20 15v3a2 2 0 0 1-2 2h-3" />
+      <path d="M9 20H6a2 2 0 0 1-2-2v-3" />
+      <path d="M9 12h6" strokeDasharray="2 2.5" />
+    </>
+  ),
+  "megaphone-mute": (
+    <>
+      <path d="M3 10v4h3l5 4V6l-5 4H3z" />
+      <path d="M15 9a3 3 0 0 1 0 6" />
+      <path d="M4 4l16 16" />
+    </>
+  ),
+  "blocked-gear": (
+    <>
+      <circle cx="10" cy="12" r="5" />
+      <path d="M10 5v2.2M10 16.8V19M3 12h2.2M14.8 12H17M5.4 6.4l1.6 1.6M13 15l1.6 1.6M5.4 17.6l1.6-1.6M13 9l1.6-1.6" />
+      <path d="M17 5l4 4M21 5l-4 4" />
+    </>
+  ),
+  "paper-shield": (
+    <>
+      <path
+        d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"
+        strokeDasharray="3 3"
+      />
+      <path d="M9 12h6" strokeDasharray="2 2" />
+    </>
+  ),
 };
 
 export function ServiceIcon({ name, className = "h-6 w-6" }: { name: string; className?: string }) {

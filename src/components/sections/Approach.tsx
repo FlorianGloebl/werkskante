@@ -9,12 +9,11 @@ export function Approach() {
   return (
     <section id="ansatz" className="relative overflow-hidden bg-ink py-24 text-white sm:py-32">
       <Image
-        src="/images/hero-industrial-edge.jpg"
+        src="/images/approach-focus.jpg"
         alt=""
         fill
         sizes="100vw"
         className="object-cover opacity-[0.14]"
-        style={{ objectPosition: "20% 30%" }}
       />
       <div
         className="pointer-events-none absolute inset-0 bg-ink/80"

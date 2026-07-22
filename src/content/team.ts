@@ -13,11 +13,11 @@ export const team: TeamMember[] = [
     visible: true,
   },
   {
-    id: "andi",
-    name: "Andi",
+    id: "andreas-wellenhofer",
+    name: "Andreas Wellenhofer",
     role: "Arbeitsschutz, Industrieerfahrung, Absturzsicherung & Schulungen",
     description:
-      "Andi bringt den Blick aus dem industriellen Alltag ein – nah an der Arbeit, nah an den Menschen, nah an der Umsetzung.",
+      "Andreas bringt den Blick aus dem industriellen Alltag ein – nah an der Arbeit, nah an den Menschen, nah an der Umsetzung.",
     focusAreas: ["Arbeitsschutz", "Absturzsicherung", "Schulungen", "Praxis vor Ort"],
     image: "/team/andi.jpg",
     sortOrder: 2,
