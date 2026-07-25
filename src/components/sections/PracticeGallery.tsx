@@ -1,20 +1,21 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
+import { assetPath } from "@/lib/basePath";
 
 const images = [
   {
-    src: "/images/rope-access-safety.jpg",
+    src: assetPath("/images/rope-access-safety.jpg"),
     alt: "Techniker mit Absturzsicherung bei der Arbeit in der Höhe",
     caption: "Arbeiten in der Höhe",
     large: true,
   },
   {
-    src: "/images/warehouse-racking.jpg",
+    src: assetPath("/images/warehouse-racking.jpg"),
     alt: "Regale in einer Lagerhalle",
     caption: "Regalprüfungen & Prüfpflichten",
   },
   {
-    src: "/images/gallery-documentation.jpg",
+    src: assetPath("/images/gallery-documentation.jpg"),
     alt: "Zwei Kolleginnen prüfen eine Checkliste im Lager",
     caption: "Gefährdungsbeurteilung & Dokumentation",
   },

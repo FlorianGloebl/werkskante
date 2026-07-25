@@ -6,47 +6,50 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { contactTopics } from "@/lib/validation";
 import { siteSettings } from "@/content/site";
+import { assetPath } from "@/lib/basePath";
 
-type Status = "idle" | "submitting" | "success" | "error";
+type Status = "idle" | "success";
 
 export function Contact() {
   const [status, setStatus] = useState<Status>("idle");
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setStatus("submitting");
-    setErrorMessage(null);
-
     const form = event.currentTarget;
-    const data = Object.fromEntries(new FormData(form).entries());
+    if (!form.reportValidity()) return;
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+    const data = Object.fromEntries(new FormData(form).entries()) as Record<string, string>;
 
-      if (!response.ok) {
-        const result = await response.json().catch(() => null);
-        setErrorMessage(result?.error ?? "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.");
-        setStatus("error");
-        return;
-      }
-
+    // Honeypot ausgelöst: Formular still bestätigen, aber nichts öffnen.
+    if (data.website) {
       setStatus("success");
       form.reset();
-    } catch {
-      setErrorMessage("Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.");
-      setStatus("error");
+      return;
     }
+
+    const subject = `Neue Anfrage über werkskante.de: ${data.topic}`;
+    const body = [
+      `Firma: ${data.companyName}`,
+      `Ansprechpartner: ${data.contactName}`,
+      `E-Mail: ${data.email}`,
+      `Telefon: ${data.phone || "-"}`,
+      `Mitarbeitende: ${data.employeeCount || "-"}`,
+      `Branche: ${data.industry || "-"}`,
+      `Thema: ${data.topic}`,
+      "",
+      data.message,
+    ].join("\n");
+
+    window.location.href = `mailto:${siteSettings.contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    setStatus("success");
+    form.reset();
   }
 
   return (
     <section id="kontakt" className="relative overflow-hidden bg-ink py-24 text-white sm:py-32">
       <Image
-        src="/images/contact-conversation-v2.jpg"
+        src={assetPath("/images/contact-conversation-v2.jpg")}
         alt=""
         fill
         sizes="100vw"
@@ -133,19 +136,16 @@ export function Contact() {
 
           <button
             type="submit"
-            disabled={status === "submitting"}
-            className="mt-2 inline-flex items-center justify-center rounded-sm bg-accent px-6 py-3.5 text-sm font-semibold tracking-wide text-white uppercase transition-colors hover:bg-white hover:text-ink disabled:opacity-60"
+            className="mt-2 inline-flex items-center justify-center rounded-sm bg-accent px-6 py-3.5 text-sm font-semibold tracking-wide text-white uppercase transition-colors hover:bg-white hover:text-ink"
           >
-            {status === "submitting" ? "Wird gesendet …" : "Anfrage senden"}
+            Anfrage senden
           </button>
 
           {status === "success" && (
             <p className="text-sm text-steel">
-              Vielen Dank! Wir melden uns zeitnah bei Ihnen.
+              Ihr E-Mail-Programm öffnet sich mit einer vorausgefüllten Anfrage. Bitte senden Sie
+              die E-Mail ab, damit wir sie erhalten.
             </p>
-          )}
-          {status === "error" && errorMessage && (
-            <p className="text-sm text-red-400">{errorMessage}</p>
           )}
         </form>
       </Container>

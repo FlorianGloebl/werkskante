@@ -5,12 +5,13 @@ import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { siteSettings } from "@/content/site";
+import { assetPath } from "@/lib/basePath";
 
 export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden bg-ink pt-24 pb-24 text-white sm:pt-28">
       <Image
-        src="/images/hero-industrial-edge.jpg"
+        src={assetPath("/images/hero-industrial-edge.jpg")}
         alt=""
         fill
         priority

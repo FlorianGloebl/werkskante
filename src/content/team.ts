@@ -1,4 +1,5 @@
 import type { TeamMember } from "@/types/content";
+import { assetPath } from "@/lib/basePath";
 
 export const team: TeamMember[] = [
   {
@@ -8,7 +9,7 @@ export const team: TeamMember[] = [
     description:
       "Florian verbindet Beratungserfahrung mit einem klaren Blick für Wertschöpfung, Prozesse und mittelständische Realität.",
     focusAreas: ["Prozessberatung", "Mittelstand", "Vertrieb", "Umsetzung"],
-    image: "/team/florian-gloebl.jpg",
+    image: assetPath("/team/florian-gloebl.jpg"),
     sortOrder: 1,
     visible: true,
   },
@@ -19,7 +20,7 @@ export const team: TeamMember[] = [
     description:
       "Andreas bringt den Blick aus dem industriellen Alltag ein – nah an der Arbeit, nah an den Menschen, nah an der Umsetzung.",
     focusAreas: ["Arbeitsschutz", "Absturzsicherung", "Schulungen", "Praxis vor Ort"],
-    image: "/team/andi.jpg",
+    image: assetPath("/team/andi.jpg"),
     sortOrder: 2,
     visible: true,
   },

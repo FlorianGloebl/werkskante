@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { StickyCta } from "@/components/interactive/StickyCta";
 import { siteSettings } from "@/content/site";
+import { assetPath } from "@/lib/basePath";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
     description: siteSettings.metaDescription,
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: assetPath("/favicon.ico"),
   },
 };
 

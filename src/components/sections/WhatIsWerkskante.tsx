@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
+import { assetPath } from "@/lib/basePath";
 
 const statements = [
   "Im Betrieb gelten andere Realitäten als im Konferenzraum.",
@@ -14,7 +15,7 @@ export function WhatIsWerkskante() {
       <Container className="grid gap-12 lg:grid-cols-12 lg:items-stretch">
         <div className="relative min-h-[320px] overflow-hidden rounded-sm lg:col-span-5">
           <Image
-            src="/images/whatis-modern.jpg"
+            src={assetPath("/images/whatis-modern.jpg")}
             alt="Techniker bei der Verdrahtung eines Schaltschranks"
             fill
             sizes="(min-width: 1024px) 40vw, 90vw"

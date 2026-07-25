@@ -5,12 +5,13 @@ import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { ServiceIcon } from "@/components/ui/ServiceIcon";
 import { problemPoints } from "@/content/approach";
+import { assetPath } from "@/lib/basePath";
 
 export function Problem() {
   return (
     <section id="problem" className="relative overflow-hidden bg-ink py-24 text-white sm:py-32">
       <Image
-        src="/images/problem-paperwork.jpg"
+        src={assetPath("/images/problem-paperwork.jpg")}
         alt=""
         fill
         sizes="100vw"

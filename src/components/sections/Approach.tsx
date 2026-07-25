@@ -4,12 +4,13 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { approachPrinciples } from "@/content/approach";
 import { AngemessenheitsKompass } from "@/components/interactive/AngemessenheitsKompass";
 import { ProzessKante } from "@/components/interactive/ProzessKante";
+import { assetPath } from "@/lib/basePath";
 
 export function Approach() {
   return (
     <section id="ansatz" className="relative overflow-hidden bg-ink py-24 text-white sm:py-32">
       <Image
-        src="/images/approach-focus.jpg"
+        src={assetPath("/images/approach-focus.jpg")}
         alt=""
         fill
         sizes="100vw"

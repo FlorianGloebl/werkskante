@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CheckQuiz } from "@/components/interactive/CheckQuiz";
 import { checkIncluded, checkExcluded, productLadder } from "@/content/check";
+import { assetPath } from "@/lib/basePath";
 
 export function WerkskanteCheck() {
   return (
@@ -10,7 +11,7 @@ export function WerkskanteCheck() {
       <Container className="flex flex-col gap-16">
         <div className="relative aspect-21/9 overflow-hidden rounded-sm sm:aspect-[3/1]">
           <Image
-            src="/images/check-production-hall.jpg"
+            src={assetPath("/images/check-production-hall.jpg")}
             alt="Moderne Produktionshalle im Maschinenbau"
             fill
             sizes="100vw"
