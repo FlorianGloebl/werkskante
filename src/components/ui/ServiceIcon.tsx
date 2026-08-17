@@ -119,6 +119,53 @@ const paths: Record<string, ReactNode> = {
       <path d="M9 12h6" strokeDasharray="2 2" />
     </>
   ),
+  certificate: (
+    <>
+      <circle cx="12" cy="9" r="6" />
+      <path d="M9.5 14.5L8 21l4-2 4 2-1.5-6.5" />
+      <path d="M9.5 9l1.7 1.7L14.5 7" />
+    </>
+  ),
+  leaf: (
+    <>
+      <path d="M5 19c0-8 4.5-13 14-14-1 9.5-6 14-14 14z" />
+      <path d="M5 19c2-3 4.5-5.5 8-8" />
+    </>
+  ),
+  torch: (
+    <>
+      <path d="M10 3c-1 1.5-1.5 2.8-1.5 4a3.5 3.5 0 0 0 7 0c0-1.2-.5-2.5-1.5-4-.3 1.2-1 2-1.7 2S10.3 4.2 10 3z" />
+      <path d="M9.5 10.5h5L15 21H9l-.5-10.5z" />
+      <path d="M9.5 15h5" />
+    </>
+  ),
+  "magnifier-check": (
+    <>
+      <circle cx="10.5" cy="10.5" r="6.5" />
+      <path d="M15.5 15.5L21 21" />
+      <path d="M7.5 10.5l2 2 3.5-4" />
+    </>
+  ),
+  layers: (
+    <>
+      <path d="M12 3l8 4.5-8 4.5-8-4.5L12 3z" />
+      <path d="M4 12l8 4.5 8-4.5" />
+      <path d="M4 16.5l8 4.5 8-4.5" />
+    </>
+  ),
+  caliper: (
+    <>
+      <path d="M3 6v5" />
+      <path d="M21 6v5" />
+      <path d="M3 8.5h18" />
+      <path d="M7 8.5V5.5" />
+      <path d="M11 8.5V6.5" />
+      <path d="M15 8.5V6.5" />
+      <path d="M6 15l3 6" />
+      <path d="M18 15l-3 6" />
+      <path d="M6 15h12" />
+    </>
+  ),
 };
 
 export function ServiceIcon({ name, className = "h-6 w-6" }: { name: string; className?: string }) {

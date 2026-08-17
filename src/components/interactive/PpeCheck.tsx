@@ -28,8 +28,8 @@ export function PpeCheck() {
             aria-pressed={active === item.id}
             className={`flex flex-col items-center gap-2 rounded-sm border p-4 text-center outline-none transition-all ${
               active === item.id
-                ? "border-accent bg-white text-ink ring-2 ring-accent"
-                : "border-transparent bg-white/60 text-ink/50 hover:bg-white hover:ring-2 hover:ring-accent/60 focus-visible:ring-2 focus-visible:ring-accent"
+                ? "border-accent bg-accent/10 text-ink ring-2 ring-accent"
+                : "border-transparent bg-white/60 text-ink/50 hover:bg-accent/10 hover:ring-2 hover:ring-accent/60 focus-visible:bg-accent/10 focus-visible:ring-2 focus-visible:ring-accent"
             }`}
           >
             <ServiceIcon

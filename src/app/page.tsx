@@ -16,11 +16,11 @@ export default function Home() {
       <WhatIsWerkskante />
       <Problem />
       <Approach />
-      <WerkskanteCheck />
       <Services />
       <PracticeGallery />
       <Team />
       <Trust />
+      <WerkskanteCheck />
       <Contact />
     </>
   );

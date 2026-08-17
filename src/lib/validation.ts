@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { services } from "@/content/services";
 
 export const contactFormSchema = z.object({
   companyName: z.string().trim().min(2, "Bitte geben Sie Ihren Firmennamen an."),
@@ -17,10 +18,9 @@ export type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export const contactTopics = [
   "Kostenloser Werkskante-Check",
-  "Arbeitsschutz-Basis",
-  "Absturzsicherung & PSA gegen Absturz",
-  "Regalprüfungen & Prüfpflichten",
-  "Schulungen & Sicherheitskultur",
-  "Prozesse & Wertschöpfung",
+  ...services
+    .filter((s) => s.visible)
+    .sort((a, b) => a.sortOrder - b.sortOrder)
+    .map((s) => s.title),
   "Sonstiges",
 ];

@@ -7,7 +7,6 @@ const images = [
     src: assetPath("/images/rope-access-safety.jpg"),
     alt: "Techniker mit Absturzsicherung bei der Arbeit in der Höhe",
     caption: "Arbeiten in der Höhe",
-    large: true,
   },
   {
     src: assetPath("/images/warehouse-racking.jpg"),
@@ -19,6 +18,21 @@ const images = [
     alt: "Zwei Kolleginnen prüfen eine Checkliste im Lager",
     caption: "Gefährdungsbeurteilung & Dokumentation",
   },
+  {
+    src: assetPath("/images/symbolbild-schweisstechnik.jpg"),
+    alt: "Schweißarbeiten an einem Metallbauteil",
+    caption: "Schweißtechnik & Schweißaufsicht",
+  },
+  {
+    src: assetPath("/images/symbolbild-pruefplanung.jpg"),
+    alt: "Präzisionsmessung eines Stahlträgers mit einer Messschieber-Lehre",
+    caption: "Prüfplanung & Form-/Lagetoleranzen",
+  },
+  {
+    src: assetPath("/images/symbolbild-schulung.jpg"),
+    alt: "Erfahrener Kollege erklärt einem jüngeren Mitarbeitenden eine Maschine auf dem Shopfloor",
+    caption: "Schulungen & Sicherheitskultur",
+  },
 ];
 
 export function PracticeGallery() {
@@ -28,23 +42,17 @@ export function PracticeGallery() {
         <span className="mb-8 inline-block text-xs font-semibold tracking-[0.2em] text-steel uppercase">
           Aus der Praxis
         </span>
-        <div className="grid gap-6 sm:grid-cols-3 sm:grid-rows-2">
+        <div className="grid gap-6 sm:grid-cols-3">
           {images.map((image) => (
             <div
               key={image.src}
-              className={`group relative aspect-16/10 overflow-hidden rounded-sm ${
-                image.large ? "sm:aspect-auto sm:col-span-2 sm:row-span-2" : ""
-              }`}
+              className="group relative aspect-4/3 overflow-hidden rounded-sm"
             >
               <Image
                 src={image.src}
                 alt={image.alt}
                 fill
-                sizes={
-                  image.large
-                    ? "(min-width: 640px) 66vw, 100vw"
-                    : "(min-width: 640px) 33vw, 100vw"
-                }
+                sizes="(min-width: 640px) 33vw, 100vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div

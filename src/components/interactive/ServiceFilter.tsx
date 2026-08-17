@@ -15,6 +15,9 @@ const categoryLabels: Record<string, string> = {
   pruefung: "Prüfpflichten",
   schulung: "Schulungen",
   prozesse: "Prozesse",
+  qm: "QM & ISO 9001",
+  umwelt: "Umweltmanagement",
+  fertigung: "Fertigung & Prüftechnik",
 };
 
 export function ServiceFilter({ services }: ServiceFilterProps) {
@@ -37,7 +40,7 @@ export function ServiceFilter({ services }: ServiceFilterProps) {
             className={`rounded-full px-4 py-2 text-sm font-semibold outline-none transition-all ${
               active === category
                 ? "bg-ink text-white ring-2 ring-accent"
-                : "bg-mist text-ink/60 hover:bg-ink/10 hover:ring-2 hover:ring-accent/60 focus-visible:ring-2 focus-visible:ring-accent"
+                : "bg-mist text-ink/60 hover:bg-accent/10 hover:text-accent hover:ring-2 hover:ring-accent/60 focus-visible:bg-accent/10 focus-visible:ring-2 focus-visible:ring-accent"
             }`}
           >
             {categoryLabels[category] ?? category}
@@ -49,7 +52,7 @@ export function ServiceFilter({ services }: ServiceFilterProps) {
         {visible.map((service) => (
           <div
             key={service.id}
-            className="group flex flex-col gap-3 rounded-sm border border-ink/12 bg-white p-6 ring-1 ring-transparent transition-all hover:-translate-y-1 hover:border-accent/30 hover:shadow-lg hover:shadow-ink/5 hover:ring-2 hover:ring-accent/50"
+            className="group flex flex-col gap-3 rounded-sm border border-ink/12 bg-white p-6 ring-1 ring-transparent transition-all hover:-translate-y-1 hover:border-accent/30 hover:bg-accent/5 hover:shadow-lg hover:shadow-ink/5 hover:ring-2 hover:ring-accent/50"
           >
             <ServiceIcon
               name={service.icon}

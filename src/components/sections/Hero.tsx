@@ -5,11 +5,46 @@ import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { siteSettings } from "@/content/site";
+import { team } from "@/content/team";
 import { assetPath } from "@/lib/basePath";
+
+const founders = team.filter((m) => m.visible).sort((a, b) => a.sortOrder - b.sortOrder);
+
+const cutoutImages: Record<string, string> = {
+  "florian-gloebl": assetPath("/team/florian-gloebl-cutout.png"),
+  "andreas-wellenhofer": assetPath("/team/andi-cutout.png"),
+  "daniel-peschl": assetPath("/team/daniel-peschl-cutout.png"),
+};
+
+function TeamCutouts({ className = "", imageClassName = "" }: { className?: string; imageClassName?: string }) {
+  return (
+    <div className={`flex items-end -space-x-6 ${className}`}>
+      {founders.map((member, i) => {
+        const cutout = cutoutImages[member.id];
+        if (!cutout) return null;
+        return (
+          <div
+            key={member.id}
+            className={`relative aspect-4/5 ${imageClassName}`}
+            style={{ zIndex: founders.length - i }}
+          >
+            <Image
+              src={cutout}
+              alt={member.name}
+              fill
+              sizes="200px"
+              className="object-contain object-bottom drop-shadow-[0_16px_24px_rgba(0,0,0,0.5)]"
+            />
+          </div>
+        );
+      })}
+    </div>
+  );
+}
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden bg-ink pt-24 pb-24 text-white sm:pt-28">
+    <section id="top" className="relative overflow-hidden bg-ink pt-32 pb-24 text-white sm:pt-40">
       <Image
         src={assetPath("/images/hero-industrial-edge.jpg")}
         alt=""
@@ -58,13 +93,21 @@ export function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-            className="lg:col-span-4"
+            className="lg:col-span-4 lg:-mt-12"
           >
             <p className="rounded-sm bg-ink/55 p-5 text-lg leading-relaxed text-white/90 backdrop-blur-sm">
-              Werkskante unterstützt produzierende Mittelständler dabei, Arbeitssicherheit
-              rechtlich passend, prozessnah und wertschöpfungsorientiert umzusetzen – mit
-              Blick auf Menschen, Abläufe und den echten Betrieb.
+              Werkskante unterstützt produzierende Mittelständler dabei, Arbeitssicherheit,
+              Qualität und Umweltmanagement rechtlich passend, prozessnah und
+              wertschöpfungsorientiert umzusetzen – mit Blick auf Menschen, Abläufe und den
+              echten Betrieb.
             </p>
+
+            <div className="mt-4 flex items-center gap-3 sm:hidden">
+              <TeamCutouts imageClassName="h-20 w-auto" />
+              <span className="text-xs font-medium text-white/60">
+                {founders.map((m) => m.name.split(" ")[0]).join(", ")} – Ihr Werkskante-Team
+              </span>
+            </div>
           </motion.div>
         </div>
 
@@ -78,10 +121,14 @@ export function Hero() {
             Ansatz kennenlernen
           </Button>
           <Button href="#kontakt" variant="primary">
-            Kostenlosen Vor-Ort-Check anfragen
+            Vor-Ort-Check anfragen
           </Button>
         </motion.div>
       </Container>
+
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 hidden justify-end pr-6 sm:flex lg:pr-16">
+        <TeamCutouts imageClassName="h-40 lg:h-56" />
+      </div>
 
       <motion.div
         initial={{ scaleX: 0 }}

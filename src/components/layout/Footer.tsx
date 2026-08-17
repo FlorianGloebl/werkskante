@@ -1,9 +1,13 @@
 import Link from "next/link";
 import { Logo } from "@/components/ui/Logo";
 import { siteSettings } from "@/content/site";
+import { businessUnits } from "@/content/services";
 
 export function Footer() {
   const year = new Date(2026, 0, 1).getFullYear();
+  const competenceLinks = businessUnits
+    .filter((unit) => unit.visible)
+    .sort((a, b) => a.sortOrder - b.sortOrder);
 
   return (
     <footer className="border-t border-white/10 bg-black text-white/70">
@@ -20,9 +24,14 @@ export function Footer() {
             <div className="flex flex-col gap-3">
               <span className="font-semibold text-white">Navigation</span>
               <a href="#ansatz" className="hover:text-white">Ansatz</a>
-              <a href="#leistungen" className="hover:text-white">Leistungen</a>
-              <a href="#check" className="hover:text-white">Werkskante-Check</a>
+              {competenceLinks.map((unit) => (
+                <a key={unit.id} href={`#${unit.slug}`} className="hover:text-white">
+                  {unit.navLabel}
+                </a>
+              ))}
               <a href="#team" className="hover:text-white">Team</a>
+              <a href="#referenzen" className="hover:text-white">Referenzen</a>
+              <a href="#check" className="hover:text-white">Werkskante-Check</a>
             </div>
             <div className="flex flex-col gap-3">
               <span className="font-semibold text-white">Kontakt</span>

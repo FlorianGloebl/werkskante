@@ -3,15 +3,8 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Edge } from "@/components/ui/Edge";
 import { team } from "@/content/team";
-
-function initials(name: string) {
-  return name
-    .split(" ")
-    .map((part) => part[0])
-    .slice(0, 2)
-    .join("")
-    .toUpperCase();
-}
+import { businessUnits } from "@/content/services";
+import { initials } from "@/lib/initials";
 
 export function Team() {
   const members = team.filter((m) => m.visible).sort((a, b) => a.sortOrder - b.sortOrder);
@@ -21,16 +14,22 @@ export function Team() {
       <Container className="flex flex-col gap-14">
         <SectionHeading
           eyebrow="Team"
-          title="Zwei Blickwinkel, ein Anspruch."
-          description="Werkskante arbeitet persönlich und vor Ort – mit einem Team, das Betrieb, Prozesse und Arbeitsschutz aus erster Hand kennt."
+          title="Ein Team, ein Anspruch."
+          description="Werkskante arbeitet persönlich und vor Ort – mit einem Team, das Betrieb, Prozesse und die jeweiligen Fachthemen aus erster Hand kennt."
         />
 
-        <div className="grid gap-8 sm:grid-cols-2">
-          {members.map((member) => (
-            <div
-              key={member.id}
-              className="flex flex-col gap-5 rounded-sm border border-ink/10 bg-white p-8"
-            >
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {members.map((member) => {
+            const areas = businessUnits
+              .filter((unit) => unit.visible && unit.teamMemberIds.includes(member.id))
+              .sort((a, b) => a.sortOrder - b.sortOrder);
+
+            return (
+              <div
+                key={member.id}
+                id={member.id}
+                className="flex scroll-mt-24 flex-col gap-5 rounded-sm border border-ink/10 bg-white p-8"
+              >
               <div className="relative aspect-4/5 w-full overflow-hidden rounded-sm bg-ink">
                 {member.image ? (
                   <Image
@@ -68,8 +67,22 @@ export function Team() {
                   </span>
                 ))}
               </div>
-            </div>
-          ))}
+              {areas.length > 0 && (
+                <div className="flex flex-wrap gap-2 border-t border-ink/10 pt-4">
+                  {areas.map((unit) => (
+                    <a
+                      key={unit.id}
+                      href={`#${unit.slug}`}
+                      className="rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent hover:bg-accent/20"
+                    >
+                      {unit.navLabel}
+                    </a>
+                  ))}
+                </div>
+              )}
+              </div>
+            );
+          })}
         </div>
       </Container>
     </section>

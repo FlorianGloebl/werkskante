@@ -29,9 +29,9 @@ export function WerkskanteCheck() {
         </div>
 
         <SectionHeading
-          eyebrow="Türöffner"
+          eyebrow="Erster Schritt"
           title="Der kostenlose Werkskante-Check"
-          description="Wir kommen zu Ihnen in den Betrieb, sprechen mit den Menschen vor Ort, schauen auf Arbeitsschutz, Prozesse und Wertschöpfung – und geben Ihnen eine erste grobe Einschätzung."
+          description="Wir kommen zu Ihnen in den Betrieb, sprechen mit den Menschen vor Ort, schauen auf Arbeitsschutz, Qualität, Umwelt und Prozesse – und geben Ihnen eine erste grobe Einschätzung."
         />
 
         <div className="grid gap-8 lg:grid-cols-2">
@@ -59,12 +59,12 @@ export function WerkskanteCheck() {
           </div>
 
           <div className="rounded-sm border border-ink/10 bg-white/70 p-8">
-            <h3 className="font-display text-lg font-bold text-ink/60">
-              Nicht kostenlos enthalten
+            <h3 className="font-display text-lg font-bold text-ink/70">
+              Auf Anfrage kostenlos
             </h3>
             <ul className="mt-5 flex flex-col gap-3">
               {checkExcluded.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-ink/50">
+                <li key={item} className="flex items-start gap-3 text-ink/70">
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -72,10 +72,11 @@ export function WerkskanteCheck() {
                     strokeWidth={2.5}
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="mt-0.5 h-4 w-4 shrink-0 text-ink/30"
+                    className="mt-0.5 h-4 w-4 shrink-0 text-accent/70"
                     aria-hidden="true"
                   >
-                    <path d="M6 6l12 12M18 6L6 18" />
+                    <path d="M8 12h8" />
+                    <path d="M12 8l4 4-4 4" />
                   </svg>
                   {item}
                 </li>
@@ -99,9 +100,23 @@ export function WerkskanteCheck() {
           </div>
         </div>
 
-        <div>
-          <h3 className="mb-6 font-display text-lg font-bold text-ink">Mini-Selbstcheck</h3>
-          <CheckQuiz />
+        <div className="rounded-lg bg-gradient-to-br from-accent/15 via-accent/5 to-transparent p-1">
+          <div className="rounded-md bg-white p-6 sm:p-8">
+            <span className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold tracking-wide text-accent uppercase">
+              <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+              Interaktiv · 2 Minuten
+            </span>
+            <h3 className="mt-4 font-display text-2xl font-bold text-ink">
+              Machen Sie den Mini-Selbstcheck
+            </h3>
+            <p className="mt-2 max-w-xl text-ink/60">
+              Direkt hier online: wenige Fragen zu Ihrem Bereich, sofort ein erster Hinweis, wo
+              sich ein genauerer Blick lohnt.
+            </p>
+            <div className="mt-8">
+              <CheckQuiz />
+            </div>
+          </div>
         </div>
       </Container>
     </section>

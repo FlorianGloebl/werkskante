@@ -28,7 +28,7 @@ export function Problem() {
 
       <Container className="relative">
         <h2 className="max-w-3xl font-display text-3xl leading-tight font-bold tracking-tight sm:text-4xl">
-          Arbeitsschutz scheitert selten am Gesetz. Meistens scheitert er an der
+          Gute Vorgaben scheitern selten am Gesetz. Meistens scheitern sie an der
           Umsetzung.
         </h2>
 

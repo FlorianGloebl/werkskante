@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/Button";
 
-const OBSTRUCTED_SECTION_IDS = ["leistungen", "check", "kontakt"];
+const OBSTRUCTED_SECTION_IDS = ["ansatz", "leistungen", "check", "team", "referenzen", "kontakt"];
 
 export function StickyCta() {
   const [scrolledPast, setScrolledPast] = useState(false);

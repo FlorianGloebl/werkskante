@@ -24,7 +24,7 @@ export function Approach() {
       <Container className="relative flex flex-col gap-16">
         <SectionHeading
           eyebrow="Unser Ansatz"
-          title="Wir machen Arbeitsschutz nicht größer als nötig. Aber wir nehmen ihn ernst."
+          title="Wir machen unsere Arbeit nicht größer als nötig. Aber wir nehmen sie ernst."
           light
         />
 

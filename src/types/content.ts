@@ -29,9 +29,12 @@ export interface BusinessUnit {
   id: string;
   title: string;
   slug: string;
+  navLabel: string;
+  icon: string;
   claim: string;
   description: string;
   services: string[];
+  teamMemberIds: string[];
   sortOrder: number;
   visible: boolean;
 }
