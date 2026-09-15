@@ -1,5 +1,6 @@
-// Kept in sync with next.config.ts: GitHub Pages serves this repo under /werkskante/.
-export const basePath = process.env.GITHUB_PAGES === "true" ? "/werkskante" : "";
+// Seit dem Umzug auf www.werkskante.de läuft die Seite unter der Root-Domain,
+// kein Sub-Path mehr nötig (anders als zuvor auf floriangloebl.github.io/werkskante/).
+export const basePath = "";
 
 export function assetPath(path: string) {
   return `${basePath}${path}`;
