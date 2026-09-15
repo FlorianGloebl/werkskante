@@ -7,18 +7,27 @@ import { services, businessUnits } from "@/content/services";
 import { team } from "@/content/team";
 import { initials } from "@/lib/initials";
 
+const NUMBER_WORDS: Record<number, string> = { 1: "Ein", 2: "Zwei", 3: "Drei", 4: "Vier" };
+
+function joinWithUnd(items: string[]): string {
+  if (items.length <= 1) return items.join("");
+  return `${items.slice(0, -1).join(", ")} und ${items[items.length - 1]}`;
+}
+
 export function Services() {
   const areas = businessUnits
     .filter((unit) => unit.visible)
     .sort((a, b) => a.sortOrder - b.sortOrder);
+
+  const areaCountLabel = NUMBER_WORDS[areas.length] ?? String(areas.length);
 
   return (
     <section id="leistungen" className="bg-white py-24 sm:py-32">
       <Container className="flex flex-col gap-20">
         <SectionHeading
           eyebrow="Leistungen"
-          title="Drei Kompetenzbereiche. Ein Blick auf den ganzen Betrieb."
-          description="Sicherheit, Qualität, Umwelt und Prozesse hängen im Alltag zusammen – deshalb denken wir sie auch zusammen, statt sie getrennt zu behandeln."
+          title={`${areaCountLabel} Kompetenzbereich${areas.length === 1 ? "" : "e"}. Ein Blick auf den ganzen Betrieb.`}
+          description={`${joinWithUnd(areas.map((a) => a.title))} hängen im Alltag zusammen – deshalb denken wir sie auch zusammen, statt sie getrennt zu behandeln.`}
           wide
         />
 

@@ -220,7 +220,7 @@ export const productLadder: ProductLadderStep[] = [
     step: 1,
     title: "Kostenloser Werkskante-Check",
     description:
-      "Vor-Ort-Termin, Gespräche vor Ort und eine erste grobe Einschätzung von Arbeitsschutz, Qualität, Umwelt, Prozessen und Arbeitsrealität.",
+      "Vor-Ort-Termin, Gespräche vor Ort und eine erste grobe Einschätzung von Arbeitsschutz, Prozessen und Arbeitsrealität.",
   },
   {
     id: "analyse",
@@ -241,7 +241,7 @@ export const productLadder: ProductLadderStep[] = [
     step: 4,
     title: "Regelmäßige Begleitung",
     description:
-      "Laufende Betreuung, wiederkehrende Prüfungen und Weiterentwicklung Ihrer Sicherheits- und Qualitätskultur.",
+      "Laufende Betreuung, wiederkehrende Prüfungen und Weiterentwicklung Ihrer Sicherheitskultur.",
   },
 ];
 

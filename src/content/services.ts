@@ -204,7 +204,8 @@ export const services: Service[] = [
     icon: "certificate",
     category: "qm",
     sortOrder: 6,
-    visible: true,
+    // Startet erst mit Daniels Einstieg – Daten bleiben, vorerst nicht anzeigen.
+    visible: false,
   },
   {
     id: "umweltmanagement",
@@ -225,7 +226,8 @@ export const services: Service[] = [
     icon: "leaf",
     category: "umwelt",
     sortOrder: 7,
-    visible: true,
+    // Startet erst mit Daniels Einstieg – Daten bleiben, vorerst nicht anzeigen.
+    visible: false,
   },
   {
     id: "schweisstechnik",
@@ -245,7 +247,8 @@ export const services: Service[] = [
     icon: "torch",
     category: "fertigung",
     sortOrder: 8,
-    visible: true,
+    // Startet erst mit Daniels Einstieg – Daten bleiben, vorerst nicht anzeigen.
+    visible: false,
   },
   {
     id: "fertigungsueberwachung",
@@ -265,7 +268,8 @@ export const services: Service[] = [
     icon: "magnifier-check",
     category: "fertigung",
     sortOrder: 9,
-    visible: true,
+    // Startet erst mit Daniels Einstieg – Daten bleiben, vorerst nicht anzeigen.
+    visible: false,
   },
   {
     id: "korrosionsschutz-beschichtung",
@@ -285,7 +289,8 @@ export const services: Service[] = [
     icon: "layers",
     category: "fertigung",
     sortOrder: 10,
-    visible: true,
+    // Startet erst mit Daniels Einstieg – Daten bleiben, vorerst nicht anzeigen.
+    visible: false,
   },
   {
     id: "pruefplanung-toleranzen",
@@ -305,7 +310,8 @@ export const services: Service[] = [
     icon: "caliper",
     category: "fertigung",
     sortOrder: 11,
-    visible: true,
+    // Startet erst mit Daniels Einstieg – Daten bleiben, vorerst nicht anzeigen.
+    visible: false,
   },
 ];
 
