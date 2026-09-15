@@ -31,7 +31,7 @@ export function WerkskanteCheck() {
         <SectionHeading
           eyebrow="Erster Schritt"
           title="Der kostenlose Werkskante-Check"
-          description="Wir kommen zu Ihnen in den Betrieb, sprechen mit den Menschen vor Ort, schauen auf Arbeitsschutz, Qualität, Umwelt und Prozesse – und geben Ihnen eine erste grobe Einschätzung."
+          description="Wir kommen zu Ihnen in den Betrieb, sprechen mit den Menschen vor Ort, schauen auf Arbeitsschutz, Arbeitsplätze und Prozesse – und geben Ihnen eine erste grobe Einschätzung."
         />
 
         <div className="grid gap-8 lg:grid-cols-2">

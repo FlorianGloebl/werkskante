@@ -11,6 +11,13 @@ const competenceAreas = businessUnits
   .filter((unit) => unit.visible)
   .sort((a, b) => a.sortOrder - b.sortOrder);
 
+const megaMenuGridClass =
+  competenceAreas.length >= 3
+    ? "grid-cols-3"
+    : competenceAreas.length === 2
+      ? "grid-cols-2"
+      : "grid-cols-1";
+
 const trailingNavItems = [
   { label: "Team", href: "#team" },
   { label: "Referenzen", href: "#referenzen" },
@@ -74,7 +81,9 @@ export function Header() {
 
             {leistungenOpen && (
               <div className="absolute top-full left-1/2 w-[640px] -translate-x-1/2 pt-4">
-                <div className="grid grid-cols-3 gap-px overflow-hidden rounded-sm border border-white/10 bg-white/10 shadow-2xl shadow-black/40">
+                <div
+                  className={`grid ${megaMenuGridClass} gap-px overflow-hidden rounded-sm border border-white/10 bg-white/10 shadow-2xl shadow-black/40`}
+                >
                   {competenceAreas.map((unit) => (
                     <a
                       key={unit.id}

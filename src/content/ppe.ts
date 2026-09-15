@@ -45,10 +45,10 @@ export const ppeItems: PpeItem[] = [
     serviceId: "arbeitsschutz-basis",
   },
   {
-    id: "gurt",
-    label: "PSA gegen Absturz",
-    icon: "harness",
-    note: "Anschlagpunkt, Gurt, Verbindungsmittel – unser Schwerpunktthema.",
-    serviceId: "absturzsicherung",
+    id: "vollschutz",
+    label: "Vollständige PSA-Ausstattung",
+    icon: "vest",
+    note: "Nur so gut wie die Auswahl, die zur jeweiligen Gefährdung passt.",
+    serviceId: "psa-auswahl",
   },
 ];

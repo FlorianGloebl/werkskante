@@ -153,6 +153,32 @@ const paths: Record<string, ReactNode> = {
       <path d="M4 16.5l8 4.5 8-4.5" />
     </>
   ),
+  vest: (
+    <>
+      <path d="M8 4l4 2 4-2 2 3-2 2v11a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V9L6 7l2-3z" />
+      <path d="M12 6v13" strokeDasharray="1.5 2" />
+    </>
+  ),
+  gear: (
+    <>
+      <circle cx="12" cy="12" r="3" />
+      <path d="M12 3v2.5M12 18.5V21M3 12h2.5M18.5 12H21M5.6 5.6l1.8 1.8M16.6 16.6l1.8 1.8M18.4 5.6l-1.8 1.8M7.4 16.6l-1.8 1.8" />
+    </>
+  ),
+  workplace: (
+    <>
+      <rect x="4" y="5" width="16" height="10" rx="1.5" />
+      <path d="M9 19h6" />
+      <path d="M12 15v4" />
+    </>
+  ),
+  "alert-triangle": (
+    <>
+      <path d="M12 4l9 15H3l9-15z" />
+      <path d="M12 10v4" />
+      <circle cx="12" cy="17" r="0.6" fill="currentColor" stroke="none" />
+    </>
+  ),
   caliper: (
     <>
       <path d="M3 6v5" />

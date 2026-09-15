@@ -5,7 +5,7 @@ export const siteSettings: SiteSettings = {
   domain: "https://www.werkskante.de",
   metaTitle: "Werkskante | Wir für den Mittelstand",
   metaDescription:
-    "Werkskante unterstützt produzierende Mittelständler bei Arbeitssicherheit, Qualitätsmanagement (ISO 9001), Umweltmanagement, Fertigungsüberwachung und schlanken Prozessen.",
+    "Werkskante unterstützt produzierende Mittelständler bei Arbeitsschutz, Arbeitssicherheit und schlanken Prozessen – rechtlich passend und praxisnah vor Ort.",
   mainClaim: "Wo Vorschriften auf Arbeitsrealität treffen.",
   tagline: "Wir für den Mittelstand",
   contactEmail: "info@werkskante.de",

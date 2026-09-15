@@ -40,6 +40,87 @@ export const services: Service[] = [
     icon: "harness",
     category: "absturz",
     sortOrder: 2,
+    // Kommt in einigen Monaten wieder – vorerst nicht anbieten, Daten bleiben.
+    visible: false,
+  },
+  {
+    id: "psa-auswahl",
+    title: "Auswahl geeigneter, persönlicher Schutzausrüstung",
+    slug: "psa-auswahl",
+    tagline: "Passend statt pauschal.",
+    shortDescription:
+      "Wir wählen die passende PSA für Ihre Arbeitsplätze aus – auf Basis der tatsächlichen Gefährdung, nicht nach Katalog.",
+    longDescription:
+      "Auf Basis der Gefährdungsbeurteilung wählen wir die persönliche Schutzausrüstung aus, die an Ihren Arbeitsplätzen tatsächlich passt – von Kopf- über Hand- bis Fußschutz – und sorgen dafür, dass sie im Alltag auch getragen wird.",
+    bulletPoints: [
+      "Auswahl passender PSA je Arbeitsplatz",
+      "Ableitung aus der Gefährdungsbeurteilung",
+      "Beratung zu Tragekomfort und Praxistauglichkeit",
+      "Unterweisung zur richtigen Verwendung",
+    ],
+    icon: "vest",
+    category: "psa",
+    sortOrder: 3,
+    visible: true,
+  },
+  {
+    id: "maschinensicherheit",
+    title: "Beschaffung sicherer Maschinen",
+    slug: "beschaffung-sicherer-maschinen",
+    tagline: "Sicher von Anfang an.",
+    shortDescription:
+      "Sicherheitsanforderungen schon bei der Maschinenbeschaffung mitdenken – statt sie im Nachhinein nachzurüsten.",
+    longDescription:
+      "Wir unterstützen Sie bei der Beschaffung neuer Maschinen und Anlagen: CE-Konformität, Schutzeinrichtungen und Betriebssicherheit werden schon vor der Kaufentscheidung geprüft – nicht erst, wenn die Maschine schon steht.",
+    bulletPoints: [
+      "Prüfung der CE-Konformität vor Beschaffung",
+      "Bewertung von Schutzeinrichtungen",
+      "Abstimmung mit Herstellern und Lieferanten",
+      "Dokumentation für die Betriebssicherheit",
+    ],
+    icon: "gear",
+    category: "maschinen",
+    sortOrder: 4,
+    visible: true,
+  },
+  {
+    id: "arbeitsplatzgestaltung",
+    title: "Arbeitsplatzgestaltung",
+    slug: "arbeitsplatzgestaltung",
+    tagline: "Gestaltet statt nur genehmigt.",
+    shortDescription:
+      "Ergonomische und sichere Gestaltung von Produktions- und Büroarbeitsplätzen – weniger Ausfallzeiten, mehr Wertschöpfung.",
+    longDescription:
+      "Wir betrachten Produktions- und Büroarbeitsplätze mit Blick auf Ergonomie und Sicherheit, fördern damit die Gesundheit der Mitarbeitenden und senken Ausfallzeiten, die durch ungünstig gestaltete Arbeitsplätze entstehen.",
+    bulletPoints: [
+      "Ergonomische Arbeitsplatzanalyse",
+      "Optimierung von Produktions- und Büroarbeitsplätzen",
+      "Gesundheitsförderung",
+      "Reduzierung von Ausfallzeiten",
+    ],
+    icon: "workplace",
+    category: "arbeitsplatz",
+    sortOrder: 5,
+    visible: true,
+  },
+  {
+    id: "unfallanalyse-praevention",
+    title: "Unfallanalyse & Prävention",
+    slug: "unfallanalyse-praevention",
+    tagline: "Verstehen, was passiert ist – bevor es sich wiederholt.",
+    shortDescription:
+      "Aufarbeitung von Arbeits- und Beinaheunfällen, um Risiken zu erkennen und künftige Ausfälle zu vermeiden.",
+    longDescription:
+      "Wir arbeiten Arbeits- und Beinaheunfälle systematisch auf, ermitteln die tatsächlichen Ursachen und leiten daraus Präventionsmaßnahmen ab – nachvollziehbar dokumentiert für Behörden, Versicherer und die eigene Sicherheitskultur.",
+    bulletPoints: [
+      "Unfall- und Beinahe-Unfall-Analyse",
+      "Ursachenermittlung",
+      "Ableitung von Präventionsmaßnahmen",
+      "Dokumentation für Behörden und Versicherer",
+    ],
+    icon: "alert-triangle",
+    category: "unfallanalyse",
+    sortOrder: 6,
     visible: true,
   },
   {
@@ -60,7 +141,7 @@ export const services: Service[] = [
     ],
     icon: "clipboard",
     category: "pruefung",
-    sortOrder: 3,
+    sortOrder: 7,
     visible: true,
   },
   {
@@ -237,8 +318,16 @@ export const businessUnits: BusinessUnit[] = [
     icon: "shield",
     claim: "Rechtlich passend, praktisch tragfähig.",
     description:
-      "Arbeitsschutz-Basis, Absturzsicherung und Prüfpflichten – die rechtliche und organisatorische Grundlage für sicheres Arbeiten.",
-    services: ["arbeitsschutz-basis", "absturzsicherung", "pruefpflichten"],
+      "Von der Arbeitsschutz-Basis über PSA- und Maschinensicherheit bis zu Arbeitsplatzgestaltung, Unfallanalyse und Prüfpflichten – die rechtliche und organisatorische Grundlage für sicheres Arbeiten.",
+    services: [
+      "arbeitsschutz-basis",
+      "absturzsicherung",
+      "psa-auswahl",
+      "maschinensicherheit",
+      "arbeitsplatzgestaltung",
+      "unfallanalyse-praevention",
+      "pruefpflichten",
+    ],
     teamMemberIds: ["andreas-wellenhofer"],
     sortOrder: 1,
     visible: true,
@@ -262,7 +351,9 @@ export const businessUnits: BusinessUnit[] = [
     ],
     teamMemberIds: ["daniel-peschl"],
     sortOrder: 2,
-    visible: true,
+    // Bereich startet erst mit Daniels Einstieg in einigen Monaten – Daten
+    // bleiben erhalten, vorerst nicht anzeigen.
+    visible: false,
   },
   {
     id: "kultur-prozesse",

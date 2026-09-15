@@ -16,13 +16,14 @@ export const team: TeamMember[] = [
   {
     id: "andreas-wellenhofer",
     name: "Andreas Wellenhofer",
-    role: "Sicherheitsfachkraft, Industrieerfahrung, Absturzsicherung & Schulungen",
+    role: "Sicherheitsfachkraft, Industrieerfahrung, Arbeitssicherheit & Schulungen",
     description:
-      "Andreas ist Sicherheitsfachkraft und bringt den Blick aus dem industriellen Alltag ein – nah an der Arbeit, nah an den Menschen, nah an der Umsetzung.",
+      "Andreas ist Sicherheitsfachkraft und bringt den Blick aus dem industriellen Alltag ein – nah an der Arbeit, nah an den Menschen, nah an der Umsetzung. Er ist Ihr fester Ansprechpartner bei Werkskante.",
     focusAreas: [
       "Sicherheitsfachkraft",
       "Arbeitsschutz",
-      "Absturzsicherung",
+      "PSA-Auswahl",
+      "Maschinensicherheit",
       "Schulungen",
       "Praxis vor Ort",
     ],
@@ -45,6 +46,8 @@ export const team: TeamMember[] = [
     ],
     image: assetPath("/team/daniel-peschl.png"),
     sortOrder: 3,
-    visible: true,
+    // Daniel steigt erst in einigen Monaten ein – Daten bleiben erhalten,
+    // aber vorerst nicht auf der Website zeigen.
+    visible: false,
   },
 ];

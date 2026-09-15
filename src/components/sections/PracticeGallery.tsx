@@ -4,11 +4,6 @@ import { assetPath } from "@/lib/basePath";
 
 const images = [
   {
-    src: assetPath("/images/rope-access-safety.jpg"),
-    alt: "Techniker mit Absturzsicherung bei der Arbeit in der Höhe",
-    caption: "Arbeiten in der Höhe",
-  },
-  {
     src: assetPath("/images/warehouse-racking.jpg"),
     alt: "Regale in einer Lagerhalle",
     caption: "Regalprüfungen & Prüfpflichten",
@@ -17,16 +12,6 @@ const images = [
     src: assetPath("/images/gallery-documentation.jpg"),
     alt: "Zwei Kolleginnen prüfen eine Checkliste im Lager",
     caption: "Gefährdungsbeurteilung & Dokumentation",
-  },
-  {
-    src: assetPath("/images/symbolbild-schweisstechnik.jpg"),
-    alt: "Schweißarbeiten an einem Metallbauteil",
-    caption: "Schweißtechnik & Schweißaufsicht",
-  },
-  {
-    src: assetPath("/images/symbolbild-pruefplanung.jpg"),
-    alt: "Präzisionsmessung eines Stahlträgers mit einer Messschieber-Lehre",
-    caption: "Prüfplanung & Form-/Lagetoleranzen",
   },
   {
     src: assetPath("/images/symbolbild-schulung.jpg"),

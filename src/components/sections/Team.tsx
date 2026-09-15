@@ -8,6 +8,7 @@ import { initials } from "@/lib/initials";
 
 export function Team() {
   const members = team.filter((m) => m.visible).sort((a, b) => a.sortOrder - b.sortOrder);
+  const gridClass = members.length >= 3 ? "sm:grid-cols-2 lg:grid-cols-3" : "sm:grid-cols-2";
 
   return (
     <section id="team" className="bg-mist py-24 sm:py-32">
@@ -18,7 +19,7 @@ export function Team() {
           description="Werkskante arbeitet persönlich und vor Ort – mit einem Team, das Betrieb, Prozesse und die jeweiligen Fachthemen aus erster Hand kennt."
         />
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className={`grid gap-8 ${gridClass}`}>
           {members.map((member) => {
             const areas = businessUnits
               .filter((unit) => unit.visible && unit.teamMemberIds.includes(member.id))

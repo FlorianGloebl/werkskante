@@ -9,6 +9,7 @@ import { team } from "@/content/team";
 import { assetPath } from "@/lib/basePath";
 
 const founders = team.filter((m) => m.visible).sort((a, b) => a.sortOrder - b.sortOrder);
+const contactPerson = team.find((m) => m.id === "andreas-wellenhofer");
 
 const cutoutImages: Record<string, string> = {
   "florian-gloebl": assetPath("/team/florian-gloebl-cutout.png"),
@@ -96,10 +97,9 @@ export function Hero() {
             className="lg:col-span-4 lg:-mt-12"
           >
             <p className="rounded-sm bg-ink/55 p-5 text-lg leading-relaxed text-white/90 backdrop-blur-sm">
-              Werkskante unterstützt produzierende Mittelständler dabei, Arbeitssicherheit,
-              Qualität und Umweltmanagement rechtlich passend, prozessnah und
-              wertschöpfungsorientiert umzusetzen – mit Blick auf Menschen, Abläufe und den
-              echten Betrieb.
+              Werkskante unterstützt produzierende Mittelständler dabei, Arbeitsschutz und
+              Arbeitssicherheit rechtlich passend, prozessnah und wertschöpfungsorientiert
+              umzusetzen – mit Blick auf Menschen, Abläufe und den echten Betrieb.
             </p>
 
             <div className="mt-4 flex items-center gap-3 sm:hidden">
@@ -124,6 +124,29 @@ export function Hero() {
             Vor-Ort-Check anfragen
           </Button>
         </motion.div>
+
+        {contactPerson && (
+          <motion.a
+            href={`#${contactPerson.id}`}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
+            className="inline-flex w-fit items-center gap-3 rounded-full bg-white/10 py-2 pr-5 pl-2 backdrop-blur-sm transition-colors hover:bg-white/20"
+          >
+            <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full ring-2 ring-accent">
+              <Image
+                src={contactPerson.image}
+                alt={contactPerson.name}
+                fill
+                sizes="36px"
+                className="object-cover"
+              />
+            </span>
+            <span className="text-sm text-white/80">
+              Ihr fester Ansprechpartner: <span className="font-semibold text-white">{contactPerson.name}</span>
+            </span>
+          </motion.a>
+        )}
       </Container>
 
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 hidden justify-end pr-6 sm:flex lg:pr-16">

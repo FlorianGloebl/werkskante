@@ -18,10 +18,17 @@ const categoryLabels: Record<string, string> = {
   qm: "QM & ISO 9001",
   umwelt: "Umweltmanagement",
   fertigung: "Fertigung & Prüftechnik",
+  psa: "PSA-Auswahl",
+  maschinen: "Maschinensicherheit",
+  arbeitsplatz: "Arbeitsplatzgestaltung",
+  unfallanalyse: "Unfallanalyse & Prävention",
 };
 
 export function ServiceFilter({ services }: ServiceFilterProps) {
-  const categories = ["alle", ...Array.from(new Set(services.map((s) => s.category)))];
+  const categories = [
+    "alle",
+    ...Array.from(new Set(services.filter((s) => s.visible).map((s) => s.category))),
+  ];
   const [active, setActive] = useState("alle");
 
   const visible = services

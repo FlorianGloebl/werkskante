@@ -43,6 +43,9 @@ const areas = businessUnits
   .filter((unit) => unit.visible && checkQuestionsByArea[unit.id]?.length)
   .sort((a, b) => a.sortOrder - b.sortOrder);
 
+const areaGridClass =
+  areas.length >= 3 ? "sm:grid-cols-3" : areas.length === 2 ? "sm:grid-cols-2" : "sm:grid-cols-1";
+
 function buildResultMail(params: {
   areaLabel: string;
   questions: CheckQuestion[];
@@ -99,7 +102,7 @@ export function CheckQuiz() {
         <p className="mt-2 text-sm text-ink/60">
           Wenige kurze Fragen, keine Note – nur ein erster Hinweis, wo sich ein genauerer Blick lohnt.
         </p>
-        <div className="mt-6 grid gap-4 sm:grid-cols-3">
+        <div className={`mt-6 grid gap-4 ${areaGridClass}`}>
           {areas.map((unit) => (
             <button
               key={unit.id}

@@ -31,18 +31,34 @@ export const checkQuestionsByArea: Record<string, CheckQuestion[]> = {
       goodAnswer: true,
     },
     {
-      id: "absturzsicherung",
+      id: "psa-auswahl",
       question:
-        "Ist für Tätigkeiten mit Absturzrisiko eine Bewertung dokumentiert und passende PSA gegen Absturz vorhanden?",
-      hint: "Ohne dokumentierte Bewertung und passende PSA gegen Absturz bleibt das größte Einzelrisiko am Arbeitsplatz ungesteuert.",
-      serviceTitle: "Absturzsicherung & PSA gegen Absturz",
+        "Ist die persönliche Schutzausrüstung an Ihren Arbeitsplätzen passend zur jeweiligen Gefährdung ausgewählt?",
+      hint: "Pauschal beschaffte PSA schützt oft nicht dort, wo es wirklich zählt – die Auswahl muss zur konkreten Gefährdung passen.",
+      serviceTitle: "Auswahl geeigneter, persönlicher Schutzausrüstung",
       goodAnswer: true,
     },
     {
-      id: "absturz-unterweisung",
-      question: "Werden Mitarbeitende regelmäßig zur Verwendung von PSA gegen Absturz unterwiesen?",
-      hint: "Ohne regelmäßige Unterweisung wird PSA gegen Absturz im Alltag oft falsch oder gar nicht verwendet.",
-      serviceTitle: "Absturzsicherung & PSA gegen Absturz",
+      id: "maschinenbeschaffung",
+      question:
+        "Werden Sicherheitsanforderungen wie die CE-Konformität schon vor der Beschaffung neuer Maschinen geprüft?",
+      hint: "Wird die Sicherheit erst nach der Lieferung geprüft, sind Nachrüstungen teuer und der Betrieb bis dahin ungeschützt.",
+      serviceTitle: "Beschaffung sicherer Maschinen",
+      goodAnswer: true,
+    },
+    {
+      id: "arbeitsplatzgestaltung",
+      question: "Sind Ihre Arbeitsplätze in Produktion und Büro ergonomisch und sicher gestaltet?",
+      hint: "Ungünstig gestaltete Arbeitsplätze erhöhen Beschwerden und Ausfallzeiten oft schleichend, über Jahre unbemerkt.",
+      serviceTitle: "Arbeitsplatzgestaltung",
+      goodAnswer: true,
+    },
+    {
+      id: "unfallanalyse",
+      question:
+        "Werden Arbeits- und Beinahe-Unfälle systematisch analysiert, um Wiederholungen zu vermeiden?",
+      hint: "Ohne systematische Unfallanalyse bleiben vermeidbare Risiken unentdeckt – bis sich der nächste Unfall wiederholt.",
+      serviceTitle: "Unfallanalyse & Prävention",
       goodAnswer: true,
     },
     {
@@ -232,7 +248,7 @@ export const productLadder: ProductLadderStep[] = [
 export const checkIncluded = [
   "Vor-Ort-Termin",
   "Gespräche mit ausgewählten Mitarbeitenden und Verantwortlichen",
-  "Erster Blick auf Prozesse, Arbeitsschutz, Qualität und Arbeitsrealität",
+  "Erster Blick auf Arbeitsschutz, Prozesse und Arbeitsrealität",
   "Grobe Ersteinschätzung",
   "Erste Hinweise auf mögliche Handlungsfelder",
 ];
