@@ -102,7 +102,7 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
             className="lg:col-span-4 lg:mt-[42px]"
           >
-            <p className="rounded-sm bg-ink/55 p-5 text-lg leading-relaxed text-white/90 backdrop-blur-sm">
+            <p className="border-l-4 border-accent py-1 pl-5 text-lg leading-relaxed text-white/90 [text-shadow:0_2px_12px_rgba(0,0,0,0.75)]">
               Werkskante unterstützt produzierende Mittelständler dabei, Arbeitsschutz und
               Arbeitssicherheit rechtlich passend, prozessnah und wertschöpfungsorientiert
               umzusetzen – mit Blick auf Menschen, Abläufe und den echten Betrieb.
