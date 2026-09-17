@@ -143,7 +143,7 @@ export function Hero() {
               />
             </span>
             <span className="text-sm text-white/80">
-              Ihr fester Ansprechpartner: <span className="font-semibold text-white">{contactPerson.name}</span>
+              Ansprechpartner für Ihre Region: <span className="font-semibold text-white">{contactPerson.name}</span>
             </span>
           </motion.a>
         )}

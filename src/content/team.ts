@@ -10,7 +10,7 @@ export const team: TeamMember[] = [
       "Florian verbindet Beratungserfahrung mit einem klaren Blick für Wertschöpfung, Prozesse und mittelständische Realität.",
     focusAreas: ["Prozessberatung", "Mittelstand", "Vertrieb", "Umsetzung"],
     image: assetPath("/team/florian-gloebl.jpg"),
-    sortOrder: 1,
+    sortOrder: 2,
     visible: true,
   },
   {
@@ -27,8 +27,8 @@ export const team: TeamMember[] = [
       "Schulungen",
       "Praxis vor Ort",
     ],
-    image: assetPath("/team/andi.jpg"),
-    sortOrder: 2,
+    image: assetPath("/team/andi.png"),
+    sortOrder: 1,
     visible: true,
   },
   {
