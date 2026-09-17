@@ -102,9 +102,9 @@ export function Hero() {
               umzusetzen – mit Blick auf Menschen, Abläufe und den echten Betrieb.
             </p>
 
-            <div className="mt-6 flex items-end gap-4">
-              <TeamCutouts imageClassName="h-20 w-auto sm:h-28 lg:h-32" />
-              <span className="pb-2 text-xs font-medium text-white/60">
+            <div className="mt-4 flex items-center gap-3 sm:hidden">
+              <TeamCutouts imageClassName="h-20 w-auto" />
+              <span className="text-xs font-medium text-white/60">
                 {founders.map((m) => m.name.split(" ")[0]).join(", ")} – Ihr Werkskante-Team
               </span>
             </div>
@@ -148,6 +148,12 @@ export function Hero() {
           </motion.a>
         )}
       </Container>
+
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 hidden sm:block">
+        <Container className="flex justify-end">
+          <TeamCutouts imageClassName="h-40 lg:h-56" />
+        </Container>
+      </div>
 
       <motion.div
         initial={{ scaleX: 0 }}
