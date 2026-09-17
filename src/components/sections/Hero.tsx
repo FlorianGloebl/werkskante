@@ -22,7 +22,7 @@ const cutoutImages: Record<string, string> = {
 // würde die Arme anschneiden, daher gleichen wir das über einen leichten
 // Skalierungsfaktor aus (Ursprung unten, damit er an der Grundlinie bleibt).
 const cutoutScale: Record<string, number> = {
-  "andreas-wellenhofer": 1.08,
+  "andreas-wellenhofer": 1.04,
 };
 
 function TeamCutouts({ className = "", imageClassName = "" }: { className?: string; imageClassName?: string }) {

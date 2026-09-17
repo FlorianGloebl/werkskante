@@ -28,11 +28,14 @@ export function WerkskanteCheck() {
           </div>
         </div>
 
-        <SectionHeading
-          eyebrow="Erster Schritt"
-          title="Der kostenlose Werkskante-Check"
-          description="Wir kommen zu Ihnen in den Betrieb, sprechen mit den Menschen vor Ort, schauen auf Arbeitsschutz, Arbeitsplätze und Prozesse – und geben Ihnen eine erste grobe Einschätzung."
-        />
+        <div className="flex flex-col gap-4">
+          <SectionHeading eyebrow="Erster Schritt" title="Der kostenlose Werkskante-Check" />
+          <p className="text-base leading-relaxed text-ink/70 sm:text-lg">
+            Wir kommen zu Ihnen in den Betrieb, sprechen mit den Menschen vor Ort, schauen auf
+            Arbeitsschutz, Arbeitsplätze und Prozesse – und geben Ihnen eine erste grobe
+            Einschätzung.
+          </p>
+        </div>
 
         <div className="grid gap-8 lg:grid-cols-2">
           <div className="rounded-sm border border-steel/30 bg-steel/10 p-8">
