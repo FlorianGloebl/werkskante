@@ -11,6 +11,12 @@ import { assetPath } from "@/lib/basePath";
 const founders = team.filter((m) => m.visible).sort((a, b) => a.sortOrder - b.sortOrder);
 const contactPerson = team.find((m) => m.id === "andreas-wellenhofer");
 
+// Nur für die Hero-Cutouts: Florian links, Andreas rechts, damit Andreas'
+// abgeschnittener Arm (linke Bildkante seines Cutouts) hinter Florian liegt
+// statt am äußeren, sichtbaren Rand. Die Reihenfolge im Team-Bereich bleibt
+// unabhängig davon (Andreas zuerst).
+const heroFounders = [...founders].reverse();
+
 const cutoutImages: Record<string, string> = {
   "florian-gloebl": assetPath("/team/florian-gloebl-cutout.png"),
   "andreas-wellenhofer": assetPath("/team/andi-cutout.png"),
@@ -20,14 +26,14 @@ const cutoutImages: Record<string, string> = {
 function TeamCutouts({ className = "", imageClassName = "" }: { className?: string; imageClassName?: string }) {
   return (
     <div className={`flex items-end -space-x-6 ${className}`}>
-      {founders.map((member, i) => {
+      {heroFounders.map((member, i) => {
         const cutout = cutoutImages[member.id];
         if (!cutout) return null;
         return (
           <div
             key={member.id}
             className={`relative aspect-4/5 ${imageClassName}`}
-            style={{ zIndex: founders.length - i }}
+            style={{ zIndex: heroFounders.length - i }}
           >
             <Image
               src={cutout}
@@ -105,7 +111,7 @@ export function Hero() {
             <div className="mt-4 flex items-center gap-3 sm:hidden">
               <TeamCutouts imageClassName="h-20 w-auto" />
               <span className="text-xs font-medium text-white/60">
-                {founders.map((m) => m.name.split(" ")[0]).join(", ")} – Ihr Werkskante-Team
+                {heroFounders.map((m) => m.name.split(" ")[0]).join(", ")} – Ihr Werkskante-Team
               </span>
             </div>
           </motion.div>
