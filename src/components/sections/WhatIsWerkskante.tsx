@@ -16,7 +16,7 @@ export function WhatIsWerkskante() {
         <div className="relative min-h-[320px] overflow-hidden rounded-sm lg:col-span-5">
           <Image
             src={assetPath("/images/whatis-modern.jpg")}
-            alt="Team im modernen Maschinenbau bespricht Fertigungsdaten in der Produktionshalle"
+            alt="Zwei Kollegen besprechen eine Betriebsanweisung direkt in der Fertigungshalle"
             fill
             sizes="(min-width: 1024px) 40vw, 90vw"
             className="object-cover"
