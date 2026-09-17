@@ -112,7 +112,7 @@ export function WerkskanteCheck() {
             <h3 className="mt-4 font-display text-2xl font-bold text-ink">
               Machen Sie den Mini-Selbstcheck
             </h3>
-            <p className="mt-2 max-w-xl text-ink/60">
+            <p className="mt-2 text-ink/60">
               Direkt hier online: wenige Fragen zu Ihrem Bereich, sofort ein erster Hinweis, wo
               sich ein genauerer Blick lohnt.
             </p>

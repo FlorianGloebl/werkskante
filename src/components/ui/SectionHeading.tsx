@@ -5,6 +5,7 @@ interface SectionHeadingProps {
   align?: "left" | "center";
   light?: boolean;
   wide?: boolean;
+  compactTitle?: boolean;
 }
 
 export function SectionHeading({
@@ -14,6 +15,7 @@ export function SectionHeading({
   align = "left",
   light = false,
   wide = false,
+  compactTitle = false,
 }: SectionHeadingProps) {
   const alignment = align === "center" ? "text-center items-center mx-auto" : "text-left items-start";
 
@@ -30,13 +32,15 @@ export function SectionHeading({
       )}
       <h2
         className={`font-display leading-tight font-bold tracking-tight ${
-          wide ? "text-2xl sm:text-3xl" : "text-3xl sm:text-4xl"
+          compactTitle ? "text-2xl sm:text-3xl" : "text-3xl sm:text-4xl"
         } ${light ? "text-white" : "text-ink"}`}
       >
         {title}
       </h2>
       {description && (
-        <p className={`text-lg leading-relaxed ${light ? "text-white/70" : "text-ink/70"}`}>
+        <p
+          className={`text-base leading-relaxed sm:text-lg ${light ? "text-white/70" : "text-ink/70"}`}
+        >
           {description}
         </p>
       )}

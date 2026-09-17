@@ -9,11 +9,14 @@ export function Trust() {
   return (
     <section id="referenzen" className="bg-white py-24 sm:py-32">
       <Container className="flex flex-col gap-12">
-        <SectionHeading
-          eyebrow="Referenzen"
-          title="Ehrliche Referenzen. Oder gar keine."
-          description="Werkskante ist jung. Statt erfundener Kundenlogos gibt es einen klaren Anspruch: ehrliche Arbeit vor Ort und pragmatische Lösungen. Referenzprojekte kommen hierhin, sobald sie wirklich freigegeben sind."
-        />
+        <div className="flex flex-col gap-4">
+          <SectionHeading eyebrow="Referenzen" title="Ehrliche Referenzen. Oder gar keine." />
+          <p className="text-base leading-relaxed text-ink/70 sm:text-lg">
+            Werkskante ist jung. Statt erfundener Kundenlogos gibt es einen klaren Anspruch:
+            ehrliche Arbeit vor Ort und pragmatische Lösungen. Referenzprojekte kommen hierhin,
+            sobald sie wirklich freigegeben sind.
+          </p>
+        </div>
 
         {approved.length > 0 && (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

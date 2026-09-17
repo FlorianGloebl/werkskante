@@ -26,6 +26,7 @@ export function Approach() {
           eyebrow="Unser Ansatz"
           title="Wir machen unsere Arbeit nicht größer als nötig. Aber wir nehmen sie ernst."
           light
+          wide
         />
 
         <div className="grid grid-cols-2 gap-px overflow-hidden rounded-sm bg-white/10 sm:grid-cols-3 lg:grid-cols-6">

@@ -13,11 +13,13 @@ export function Team() {
   return (
     <section id="team" className="bg-mist py-24 sm:py-32">
       <Container className="flex flex-col gap-14">
-        <SectionHeading
-          eyebrow="Team"
-          title="Ein Team, ein Anspruch."
-          description="Werkskante arbeitet persönlich und vor Ort – mit einem Team, das Betrieb, Prozesse und die jeweiligen Fachthemen aus erster Hand kennt."
-        />
+        <div className="flex flex-col gap-4">
+          <SectionHeading eyebrow="Team" title="Ein Team, ein Anspruch." />
+          <p className="text-base leading-relaxed text-ink/70 sm:text-lg">
+            Wir arbeiten persönlich und vor Ort – mit einem Team, das Betrieb, Prozesse und die
+            jeweiligen Fachthemen aus erster Hand kennt.
+          </p>
+        </div>
 
         <div className={`grid gap-8 ${gridClass}`}>
           {members.map((member) => {

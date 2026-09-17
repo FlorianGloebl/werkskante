@@ -17,30 +17,17 @@ const cutoutImages: Record<string, string> = {
   "daniel-peschl": assetPath("/team/daniel-peschl-cutout.png"),
 };
 
-// Andreas' Foto hat einen etwas breiteren Kopf-/Schulter-Ausschnitt als die
-// anderen Cutouts, wodurch er bei object-contain kleiner wirkt. Ein Zuschnitt
-// würde die Arme anschneiden, daher gleichen wir das über einen leichten
-// Skalierungsfaktor aus (Ursprung unten, damit er an der Grundlinie bleibt).
-const cutoutScale: Record<string, number> = {
-  "andreas-wellenhofer": 1.04,
-};
-
 function TeamCutouts({ className = "", imageClassName = "" }: { className?: string; imageClassName?: string }) {
   return (
     <div className={`flex items-end -space-x-6 ${className}`}>
       {founders.map((member, i) => {
         const cutout = cutoutImages[member.id];
         if (!cutout) return null;
-        const scale = cutoutScale[member.id];
         return (
           <div
             key={member.id}
             className={`relative aspect-4/5 ${imageClassName}`}
-            style={{
-              zIndex: founders.length - i,
-              transform: scale ? `scale(${scale})` : undefined,
-              transformOrigin: "bottom center",
-            }}
+            style={{ zIndex: founders.length - i }}
           >
             <Image
               src={cutout}

@@ -108,13 +108,13 @@ export function CheckQuiz() {
               key={unit.id}
               type="button"
               onClick={() => setAreaId(unit.id)}
-              className="flex flex-col gap-3 rounded-sm border border-ink/10 bg-mist p-5 text-left transition-all hover:border-accent/40 hover:bg-accent/10 hover:ring-2 hover:ring-accent/40 focus-visible:outline-none focus-visible:bg-accent/10 focus-visible:ring-2 focus-visible:ring-accent"
+              className="flex flex-col gap-3 rounded-sm border border-accent bg-accent p-5 text-left text-white transition-all hover:bg-ink hover:ring-2 hover:ring-accent focus-visible:outline-none focus-visible:bg-ink focus-visible:ring-2 focus-visible:ring-accent"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-sm bg-ink text-white">
+              <div className="flex h-10 w-10 items-center justify-center rounded-sm bg-white/15 text-white">
                 <ServiceIcon name={unit.icon} className="h-5 w-5" />
               </div>
-              <span className="font-display font-bold text-ink">{unit.navLabel}</span>
-              <span className="text-sm text-ink/60">{unit.claim}</span>
+              <span className="font-display font-bold text-white">{unit.navLabel}</span>
+              <span className="text-sm text-white/75">{unit.claim}</span>
             </button>
           ))}
         </div>

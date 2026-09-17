@@ -29,6 +29,7 @@ export function Services() {
           title={`${areaCountLabel} Kompetenzbereich${areas.length === 1 ? "" : "e"}. Ein Blick auf den ganzen Betrieb.`}
           description={`${joinWithUnd(areas.map((a) => a.title))} hängen im Alltag zusammen – deshalb denken wir sie auch zusammen, statt sie getrennt zu behandeln.`}
           wide
+          compactTitle
         />
 
         {areas.map((area, index) => {
@@ -55,7 +56,7 @@ export function Services() {
                     <h3 className="font-display text-2xl leading-snug font-bold text-ink sm:text-3xl">
                       {area.claim}
                     </h3>
-                    <p className="max-w-2xl text-ink/70">{area.description}</p>
+                    <p className="text-base text-ink/70 sm:text-lg">{area.description}</p>
                   </div>
                 </div>
 
