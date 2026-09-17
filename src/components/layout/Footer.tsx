@@ -4,7 +4,7 @@ import { siteSettings } from "@/content/site";
 import { businessUnits } from "@/content/services";
 
 export function Footer() {
-  const year = new Date(2026, 0, 1).getFullYear();
+  const year = new Date().getFullYear();
   const competenceLinks = businessUnits
     .filter((unit) => unit.visible)
     .sort((a, b) => a.sortOrder - b.sortOrder);

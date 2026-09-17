@@ -60,7 +60,7 @@ export function WerkskanteCheck() {
 
           <div className="rounded-sm border border-ink/10 bg-white/70 p-8">
             <h3 className="font-display text-lg font-bold text-ink/70">
-              Auf Anfrage kostenlos
+              Auf Anfrage, kostenpflichtig
             </h3>
             <ul className="mt-5 flex flex-col gap-3">
               {checkExcluded.map((item) => (
