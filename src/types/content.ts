@@ -82,3 +82,51 @@ export interface SiteSettings {
   impressumUrl: string;
   privacyUrl: string;
 }
+
+// Inhalte der "Gründer-Begleitung"-Unit (/start) — bewusst eigene Typen,
+// keine Wiederverwendung von BusinessUnit/Service (die meinen Kompetenzbereiche
+// innerhalb der bestehenden Beratung, nicht diese zweite, eigenständige Unit).
+export interface StartOfferPoint {
+  id: string;
+  title: string;
+  description: string;
+}
+
+export interface StartProcessStep {
+  number: number;
+  title: string;
+  description: string;
+}
+
+export interface StartPageContent {
+  metaTitle: string;
+  metaDescription: string;
+  heroEyebrow: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  heroCtaLabel: string;
+  positioningParagraph: string;
+  offerPoints: StartOfferPoint[];
+  processSteps: StartProcessStep[];
+  audienceTitle: string;
+  audienceParagraph: string;
+  contactTitle: string;
+  contactDescription: string;
+}
+
+// Plattform-Ebene (Hub-Seite "/"): die Business Units als gleichwertige,
+// datengetriebene Kacheln. Eigener Typ, unabhängig von BusinessUnit/Service
+// und von StartPageContent — diese hier verlinkt nur auf die eigenständigen
+// Unit-Routen, statt deren Inhalte zu duplizieren.
+export interface PlatformUnit {
+  id: string;
+  title: string;
+  navLabel: string;
+  href: string;
+  icon: string;
+  claim: string;
+  description: string;
+  ctaLabel: string;
+  sortOrder: number;
+  visible: boolean;
+}

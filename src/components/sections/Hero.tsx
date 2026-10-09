@@ -51,7 +51,7 @@ function TeamCutouts({ className = "", imageClassName = "" }: { className?: stri
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden bg-ink pt-32 pb-24 text-white sm:pt-40">
+    <section id="top" className="relative overflow-hidden bg-ink pt-44 pb-24 text-white sm:pt-52">
       <Image
         src={assetPath("/images/hero-industrial-edge.jpg")}
         alt=""

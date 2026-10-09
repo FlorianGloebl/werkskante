@@ -43,7 +43,7 @@ body {
 /* Verhindert, dass der fixierte Header Section-Überschriften beim
    Anker-Sprung (Nav-Links, direkte URL-Anker) verdeckt. */
 section[id] {
-  scroll-margin-top: 6rem;
+  scroll-margin-top: 10rem;
 }
 
 ::selection {

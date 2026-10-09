@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/Button";
 
 const OBSTRUCTED_SECTION_IDS = ["ansatz", "leistungen", "check", "team", "referenzen", "kontakt"];
 
 export function StickyCta() {
+  const pathname = usePathname();
   const [scrolledPast, setScrolledPast] = useState(false);
   const [overSensitiveSection, setOverSensitiveSection] = useState(false);
   const intersecting = useRef<Record<string, boolean>>({});
@@ -39,7 +41,7 @@ export function StickyCta() {
     return () => observer.disconnect();
   }, []);
 
-  const visible = scrolledPast && !overSensitiveSection;
+  const visible = pathname === "/arbeitssicherheit" && scrolledPast && !overSensitiveSection;
 
   return (
     <div

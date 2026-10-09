@@ -11,6 +11,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: `${siteSettings.domain}/arbeitssicherheit`,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${siteSettings.domain}/start`,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
       url: `${siteSettings.domain}${siteSettings.impressumUrl}`,
       changeFrequency: "yearly",
       priority: 0.2,
