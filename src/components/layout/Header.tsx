@@ -87,7 +87,7 @@ export function Header() {
   return (
     <header className="fixed top-0 z-50 w-full bg-ink/95 backdrop-blur-sm">
       <div className="border-b border-white/10">
-        <div className="mx-auto flex w-full max-w-6xl justify-center px-6 py-2 sm:justify-end sm:px-8 lg:px-10">
+        <div className="mx-auto flex w-full max-w-6xl justify-center px-6 py-2 sm:px-8 lg:px-10">
           <UnitSwitcher pathname={pathname} />
         </div>
       </div>
