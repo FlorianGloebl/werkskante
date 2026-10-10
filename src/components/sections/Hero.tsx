@@ -137,19 +137,25 @@ export function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
-            className="inline-flex w-fit items-center gap-3 rounded-full bg-white/10 py-2 pr-5 pl-2 backdrop-blur-sm transition-colors hover:bg-white/20"
+            className="inline-flex w-fit items-center gap-4 rounded-sm border border-white/15 bg-white/10 py-3 pr-6 pl-3 backdrop-blur-sm transition-colors hover:border-accent/50 hover:bg-white/15"
           >
-            <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full ring-2 ring-accent">
+            <span className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full ring-2 ring-accent ring-offset-2 ring-offset-ink">
               <Image
                 src={contactPerson.image}
                 alt={contactPerson.name}
                 fill
-                sizes="36px"
+                sizes="56px"
                 className="object-cover"
               />
             </span>
-            <span className="text-sm text-white/80">
-              Ansprechpartner für Ihre Region: <span className="font-semibold text-white">{contactPerson.name}</span>
+            <span className="flex flex-col gap-0.5">
+              <span className="text-xs font-semibold tracking-[0.15em] text-steel uppercase">
+                Ansprechpartner für Ihre Region
+              </span>
+              <span className="font-display text-base font-bold text-white">
+                {contactPerson.name}
+              </span>
+              <span className="text-xs text-white/60">{contactPerson.role}</span>
             </span>
           </motion.a>
         )}

@@ -7,8 +7,8 @@ export const team: TeamMember[] = [
     name: "Florian Glöbl",
     role: "Gründer · Vertrieb",
     description:
-      "Florian hat Werkskante gegründet. Arbeitssicherheit soll den Betrieb voranbringen, nicht bremsen. Er verantwortet den Vertrieb und sorgt dafür, dass aus dem ersten Gespräch ein Ergebnis wird, das im Alltag trägt.",
-    focusAreas: ["Gründer", "Vertrieb"],
+      "Florian hat Werkskante gegründet. Sein Blick ist der auf die Wertschöpfung: Arbeitssicherheit soll den Betrieb voranbringen, nicht bremsen. Er verantwortet den Vertrieb und sorgt dafür, dass aus dem ersten Gespräch ein Ergebnis wird, das im Alltag trägt.",
+    focusAreas: ["Gründer", "Wertschöpfung", "Vertrieb"],
     image: assetPath("/team/florian-gloebl.jpg"),
     sortOrder: 2,
     visible: true,
