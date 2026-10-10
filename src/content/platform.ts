@@ -6,8 +6,9 @@ import type { PlatformUnit } from "@/types/content";
 export const platformIntro = {
   eyebrow: "Werkskante",
   title: "Wir für den Mittelstand.",
+  subheadline: "Und die Plattform für talentierte Jungunternehmer:innen und Gründer:innen.",
   subtitle:
-    "Werkskante steht für die Beratung produzierender Unternehmen in Arbeitssicherheit – und ist genauso eine Plattform für talentierte Jungunternehmer:innen und Gründer:innen auf dem Weg in die Selbstständigkeit.",
+    "Beratung zu Arbeitssicherheit für produzierende Unternehmen – und persönliche Begleitung für alle, die den Schritt in die Selbstständigkeit gehen wollen.",
 };
 
 // Kurze, eindeutige Labels statt vager Oberbegriffe — wer reinklickt, soll

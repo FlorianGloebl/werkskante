@@ -21,6 +21,9 @@ export function PlatformHero() {
         <h1 className="font-display text-5xl leading-[1.05] font-bold tracking-tight sm:text-6xl lg:text-7xl">
           {platformIntro.title}
         </h1>
+        <p className="font-display text-2xl leading-snug font-bold text-steel sm:text-3xl">
+          {platformIntro.subheadline}
+        </p>
         <p className="max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl">
           {platformIntro.subtitle}
         </p>
