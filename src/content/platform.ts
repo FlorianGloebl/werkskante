@@ -6,7 +6,7 @@ import type { PlatformUnit } from "@/types/content";
 export const platformIntro = {
   eyebrow: "Werkskante",
   title: "Wir für den Mittelstand.",
-  subheadline: "Und die Plattform für talentierte Jungunternehmer:innen und Gründer:innen.",
+  subheadline: "Die Plattform für Jungunternehmer:innen und Gründer:innen.",
   subtitle:
     "Beratung zu Arbeitssicherheit für produzierende Unternehmen – und persönliche Begleitung für alle, die den Schritt in die Selbstständigkeit gehen wollen.",
 };
