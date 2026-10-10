@@ -5,10 +5,9 @@ export const team: TeamMember[] = [
   {
     id: "florian-gloebl",
     name: "Florian Glöbl",
-    role: "Wertschöpfung, Prozesse, Mittelstand, Vertrieb & Umsetzung",
-    description:
-      "Florian verbindet Beratungserfahrung mit einem klaren Blick für Wertschöpfung, Prozesse und mittelständische Realität.",
-    focusAreas: ["Prozessberatung", "Mittelstand", "Vertrieb", "Umsetzung"],
+    role: "Gründer · Vertrieb",
+    description: "Florian hat Werkskante gegründet und verantwortet den Vertrieb.",
+    focusAreas: ["Gründer", "Vertrieb"],
     image: assetPath("/team/florian-gloebl.jpg"),
     sortOrder: 2,
     visible: true,

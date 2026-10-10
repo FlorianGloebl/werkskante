@@ -3,7 +3,6 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Edge } from "@/components/ui/Edge";
 import { team } from "@/content/team";
-import { businessUnits } from "@/content/services";
 import { initials } from "@/lib/initials";
 
 export function Team() {
@@ -23,10 +22,6 @@ export function Team() {
 
         <div className={`grid gap-8 ${gridClass}`}>
           {members.map((member) => {
-            const areas = businessUnits
-              .filter((unit) => unit.visible && unit.teamMemberIds.includes(member.id))
-              .sort((a, b) => a.sortOrder - b.sortOrder);
-
             return (
               <div
                 key={member.id}
@@ -60,29 +55,18 @@ export function Team() {
                 <p className="mt-1 text-sm font-semibold text-accent">{member.role}</p>
               </div>
               <p className="leading-relaxed text-ink/70">{member.description}</p>
-              <div className="flex flex-wrap gap-2">
-                {member.focusAreas.map((area) => (
-                  <span
-                    key={area}
-                    className="rounded-full bg-mist px-3 py-1 text-xs font-medium text-ink/60"
-                  >
+              <p className="flex flex-wrap gap-x-2 gap-y-1 border-t border-ink/10 pt-4 text-xs font-semibold tracking-wide text-ink/45 uppercase">
+                {member.focusAreas.map((area, i) => (
+                  <span key={area} className="flex items-center gap-2">
+                    {i > 0 && (
+                      <span className="text-ink/20" aria-hidden="true">
+                        ·
+                      </span>
+                    )}
                     {area}
                   </span>
                 ))}
-              </div>
-              {areas.length > 0 && (
-                <div className="flex flex-wrap gap-2 border-t border-ink/10 pt-4">
-                  {areas.map((unit) => (
-                    <a
-                      key={unit.id}
-                      href={`#${unit.slug}`}
-                      className="rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent hover:bg-accent/20"
-                    >
-                      {unit.navLabel}
-                    </a>
-                  ))}
-                </div>
-              )}
+              </p>
               </div>
             );
           })}
