@@ -8,22 +8,22 @@ import type { StartPageContent } from "@/types/content";
 export const startContent: StartPageContent = {
   metaTitle: "Gründung",
   metaDescription:
-    "Werkskante begleitet Gründer:innen beim Schritt in die Selbstständigkeit – mit Erfahrung, Netzwerk und ehrlichem Feedback.",
+    "Werkskante ist die Plattform für alle, die sich selbstständig machen wollen – ich begleite dich mit Erfahrung, Netzwerk und ehrlichem Feedback.",
 
   heroEyebrow: "Werkskante · Gründung",
   heroTitle: "Eine Idee auf eigene Beine stellen.",
   heroSubtitle:
-    "Wer gründen will, dem helfe ich beim Start – mit einem klaren Angebot, ersten Kundengesprächen und einem Netzwerk, das Türen öffnet.",
+    "Werkskante ist die Plattform, über die ich Menschen auf dem Weg in die Selbstständigkeit begleite – mit einem klaren Angebot, ersten Kundengesprächen und einem Netzwerk, das Türen öffnet.",
   heroCtaLabel: "Gründung besprechen",
 
   positioningParagraph:
-    "Ich bin kein stiller Gesellschafter im Hintergrund. Ich bin ein leidenschaftlicher Netzwerker, der mit anpackt – mit Erfahrung, ehrlichem Feedback und Kontakten, die sonst verschlossen blieben.",
+    "Dafür gibt es Werkskante: eine Plattform für alle, die sich selbstständig machen wollen. Ich bin dabei kein stiller Gesellschafter im Hintergrund, sondern ein leidenschaftlicher Netzwerker, der mit anpackt – mit Erfahrung, ehrlichem Feedback und Kontakten, die sonst verschlossen blieben.",
 
   aboutEyebrow: "Wer dich begleitet",
   aboutQuote:
     "Ich weiß, wie sich der Schritt in die Selbstständigkeit anfühlt – weil ich ihn selbst gegangen bin.",
   aboutParagraph:
-    "Fast 16 Jahre war ich in einem mittelständischen Maschinenbau-Unternehmen – zuletzt in der Geschäftsleitung. Heute stehe ich selbst mehrfach auf eigenen Beinen: mit meiner Beratung, als Mitgründer eines Unternehmens für Schweizer KMU und mit Werkskante. Diese Erfahrung – und mein Netzwerk – gebe ich jetzt an dich weiter.",
+    "Fast 16 Jahre war ich in einem mittelständischen Maschinenbau-Unternehmen – zuletzt in der Geschäftsleitung. Heute stehe ich selbst mehrfach auf eigenen Beinen: mit meiner Beratung, als Mitgründer eines Unternehmens für Schweizer KMU und mit Werkskante. Daraus ist die Idee zu Werkskante als Plattform entstanden: Menschen, die sich selbstständig machen wollen, auf genau diesem Weg zu begleiten.",
   aboutRoles: [
     "Glöbl & Partner — Beratung für den Mittelstand",
     "Coolab AG — Mitgründer",
@@ -79,7 +79,7 @@ export const startContent: StartPageContent = {
 
   audienceTitle: "Für wen das gedacht ist",
   audienceParagraph:
-    "Für alle mit einer Gründungsidee – unabhängig von Branche oder Erfahrung. Steuerliche und rechtliche Fragen gehören in die Hände der entsprechenden Fachleute, dafür bin ich nicht der richtige Ansprechpartner.",
+    "Werkskante ist für alle gedacht, die sich selbstständig machen wollen – unabhängig von Branche oder Erfahrung. Steuerliche und rechtliche Fragen gehören in die Hände der entsprechenden Fachleute, dafür bin ich nicht der richtige Ansprechpartner.",
 
   contactTitle: "Lass uns über deine Idee sprechen.",
   contactDescription: "Kurze Nachricht genügt – ich melde mich persönlich zurück.",
