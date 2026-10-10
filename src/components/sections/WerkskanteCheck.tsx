@@ -23,7 +23,7 @@ export function WerkskanteCheck() {
           />
           <div className="absolute inset-0 flex items-center">
             <p className="px-6 font-display text-base font-semibold whitespace-nowrap text-white sm:px-10 sm:text-xl lg:text-2xl">
-              Kein Formular. Ein Termin bei Ihnen vor Ort.
+              Kein Formular. Ein 30-minütiges Gespräch – telefonisch oder online.
             </p>
           </div>
         </div>
@@ -31,9 +31,9 @@ export function WerkskanteCheck() {
         <div className="flex flex-col gap-4">
           <SectionHeading eyebrow="Erster Schritt" title="Der kostenlose Werkskante-Check" />
           <p className="text-base leading-relaxed text-ink/70 sm:text-lg">
-            Wir kommen zu Ihnen in den Betrieb, sprechen mit den Menschen vor Ort, schauen auf
-            Arbeitsschutz, Arbeitsplätze und Prozesse – und geben Ihnen eine erste grobe
-            Einschätzung.
+            In einem kostenlosen, 30-minütigen Gespräch – telefonisch oder online – hören wir uns
+            Ihre Situation an und geben Ihnen eine erste grobe Einschätzung zu Arbeitsschutz,
+            Arbeitsplätzen und Prozessen.
           </p>
         </div>
 
@@ -89,7 +89,7 @@ export function WerkskanteCheck() {
         </div>
 
         <div>
-          <h3 className="mb-6 font-display text-lg font-bold text-ink">Die Produkttreppe</h3>
+          <h3 className="mb-6 font-display text-lg font-bold text-ink">Unsere Produkttreppe</h3>
           <div className="grid gap-px overflow-hidden rounded-sm bg-ink/10 sm:grid-cols-4">
             {productLadder.map((step) => (
               <div key={step.id} className="flex flex-col gap-2 bg-white p-6">

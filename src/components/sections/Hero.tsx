@@ -127,7 +127,7 @@ export function Hero() {
             Ansatz kennenlernen
           </Button>
           <Button href="#kontakt" variant="primary">
-            Vor-Ort-Check anfragen
+            Werkskante-Check anfragen
           </Button>
         </motion.div>
 

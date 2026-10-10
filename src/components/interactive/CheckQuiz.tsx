@@ -295,13 +295,13 @@ export function CheckQuiz() {
           )}
 
           <p className="text-xs text-ink/40">
-            Kein automatischer Test ersetzt die Einschätzung vor Ort – er zeigt nur, wo ein
+            Kein automatischer Test ersetzt das persönliche Gespräch – er zeigt nur, wo ein
             genauerer Blick sich lohnt.
           </p>
 
           <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
             <Button href="#kontakt" variant="primary">
-              Vor-Ort-Termin vereinbaren
+              Werkskante-Check anfragen
             </Button>
             {gaps.length > 0 && (
               <Button href="#leistungen" variant="secondary">

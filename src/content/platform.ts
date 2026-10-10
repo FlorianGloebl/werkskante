@@ -5,7 +5,7 @@ import type { PlatformUnit } from "@/types/content";
 // direkt in Hero.tsx) unverändert bleibt.
 export const platformIntro = {
   eyebrow: "Werkskante",
-  title: "Zwei Wege. Ein Partner.",
+  title: "Wir für den Mittelstand.",
   subtitle:
     "Werkskante steht für zwei eigenständige Angebote: Beratung zu Arbeitssicherheit für produzierende Unternehmen und persönliche Begleitung für Gründer:innen.",
 };

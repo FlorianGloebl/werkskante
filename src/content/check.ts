@@ -185,7 +185,7 @@ export const checkResultLevels: CheckResultLevel[] = [
     level: "gruen",
     label: "Solide Basis",
     headline: "Ihre Antworten deuten auf eine solide Basis hin.",
-    body: "Nutzen Sie den kostenlosen Vor-Ort-Termin, um das zu bestätigen: Die häufigsten Lücken zeigen sich erst im Betrieb, nicht im Selbsttest.",
+    body: "Nutzen Sie das kostenlose 30-Minuten-Gespräch, um das zu bestätigen: Die häufigsten Lücken zeigen sich erst im Austausch, nicht im Selbsttest.",
   },
   {
     level: "gelb",
@@ -197,7 +197,7 @@ export const checkResultLevels: CheckResultLevel[] = [
     level: "rot",
     label: "Deutlicher Handlungsbedarf",
     headline: "Mehrere Antworten zeigen deutlichen Handlungsbedarf.",
-    body: "Das ist keine ungewöhnliche Ausgangslage – aber eine, die wir uns zeitnah gemeinsam vor Ort ansehen sollten.",
+    body: "Das ist keine ungewöhnliche Ausgangslage – aber eine, die wir uns zeitnah gemeinsam genauer ansehen sollten.",
   },
 ];
 
@@ -220,7 +220,7 @@ export const productLadder: ProductLadderStep[] = [
     step: 1,
     title: "Kostenloser Werkskante-Check",
     description:
-      "Vor-Ort-Termin, Gespräche vor Ort und eine erste grobe Einschätzung von Arbeitsschutz, Prozessen und Arbeitsrealität.",
+      "30 Minuten, telefonisch oder online: eine erste grobe Einschätzung von Arbeitsschutz, Prozessen und Arbeitsrealität.",
   },
   {
     id: "analyse",
@@ -246,9 +246,9 @@ export const productLadder: ProductLadderStep[] = [
 ];
 
 export const checkIncluded = [
-  "Vor-Ort-Termin",
-  "Gespräche mit ausgewählten Mitarbeitenden und Verantwortlichen",
-  "Erster Blick auf Arbeitsschutz, Prozesse und Arbeitsrealität",
+  "30 Minuten, telefonisch oder online",
+  "Gespräch mit Ihnen als Verantwortlichem",
+  "Erste Einordnung zu Arbeitsschutz, Prozessen und Arbeitsrealität",
   "Grobe Ersteinschätzung",
   "Erste Hinweise auf mögliche Handlungsfelder",
 ];
