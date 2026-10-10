@@ -227,7 +227,7 @@ export const productLadder: ProductLadderStep[] = [
     step: 2,
     title: "Analyse & Konzept",
     description:
-      "Detaillierte Gefährdungsbeurteilungen, Betriebsanweisungen, Schulungsunterlagen und ein konkreter Maßnahmenplan.",
+      "Immer vor Ort: detaillierte Gefährdungsbeurteilungen, Betriebsanweisungen, Schulungsunterlagen und ein konkreter Maßnahmenplan.",
   },
   {
     id: "umsetzung",
