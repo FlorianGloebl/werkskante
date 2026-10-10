@@ -28,7 +28,7 @@ export function PlatformUnits() {
                   <ServiceIcon name={unit.icon} className="h-6 w-6" />
                 </span>
                 <span className="text-xs font-semibold tracking-[0.2em] text-accent uppercase">
-                  {String(unit.sortOrder).padStart(2, "0")} — {unit.title}
+                  Bereich {String(unit.sortOrder).padStart(2, "0")}
                 </span>
               </div>
 
@@ -49,7 +49,7 @@ export function PlatformUnits() {
                 ))}
               </div>
 
-              <span className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-ink transition-colors group-hover:text-accent">
+              <span className="mt-auto inline-flex w-full items-center justify-center gap-2 rounded-sm bg-accent px-6 py-3.5 text-sm font-semibold tracking-wide text-white uppercase transition-all group-hover:bg-ink group-hover:ring-2 group-hover:ring-accent">
                 {unit.ctaLabel}
                 <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">
                   →
