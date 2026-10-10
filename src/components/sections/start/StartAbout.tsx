@@ -41,6 +41,15 @@ export function StartAbout() {
           <p className="border-l-2 border-accent/40 pl-4 text-sm leading-relaxed text-ink/60 italic">
             {startContent.mentorsNote}
           </p>
+
+          <a
+            href="https://www.floriangloebl.de"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-ink/40 underline-offset-4 hover:text-accent hover:underline"
+          >
+            Mehr über mich: floriangloebl.de
+          </a>
         </div>
       </Container>
     </section>
