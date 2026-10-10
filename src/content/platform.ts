@@ -8,7 +8,7 @@ export const platformIntro = {
   title: "Wir für den Mittelstand.",
   subheadline: "Die Plattform für Jungunternehmer:innen und Gründer:innen.",
   subtitle:
-    "Beratung zu Arbeitssicherheit für produzierende Unternehmen – und persönliche Begleitung für alle, die den Schritt in die Selbstständigkeit gehen wollen.",
+    "Wir beraten den Mittelstand und begleiten Menschen auf dem Weg in die Selbstständigkeit.",
 };
 
 // Kurze, eindeutige Labels statt vager Oberbegriffe — wer reinklickt, soll

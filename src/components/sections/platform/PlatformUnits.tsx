@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ServiceIcon } from "@/components/ui/ServiceIcon";
 import { platformUnits } from "@/content/platform";
 
@@ -11,9 +12,7 @@ export function PlatformUnits() {
   return (
     <section className="bg-mist py-20 sm:py-28">
       <Container className="flex flex-col gap-10">
-        <span className="text-xs font-semibold tracking-[0.2em] text-accent uppercase">
-          Wählen Sie Ihren Bereich
-        </span>
+        <SectionHeading eyebrow="Unser Portfolio" title="Wählen Sie Ihren Bereich." wide />
 
         <div
           className={`grid gap-6 ${visibleUnits.length >= 2 ? "sm:grid-cols-2" : "max-w-sm"}`}
