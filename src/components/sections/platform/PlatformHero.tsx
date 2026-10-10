@@ -14,18 +14,15 @@ export function PlatformHero() {
         aria-hidden="true"
       />
 
-      <Container className="relative flex flex-col gap-6">
-        <span className="text-xs font-semibold tracking-[0.25em] text-steel uppercase">
+      <Container className="relative flex flex-col gap-3">
+        <span className="mb-3 text-xs font-semibold tracking-[0.25em] text-steel uppercase">
           {platformIntro.eyebrow}
         </span>
-        <h1 className="font-display text-5xl leading-[1.05] font-bold tracking-tight sm:text-6xl lg:text-7xl">
-          {platformIntro.title}
-        </h1>
-        <p className="font-display text-2xl leading-snug font-bold text-steel sm:text-3xl lg:whitespace-nowrap">
-          {platformIntro.subheadline}
+        <p className="font-display text-4xl leading-[1.1] font-bold tracking-tight sm:text-5xl lg:text-6xl lg:whitespace-nowrap">
+          {platformIntro.lineOne}
         </p>
-        <p className="max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl">
-          {platformIntro.subtitle}
+        <p className="font-display text-4xl leading-[1.1] font-bold tracking-tight text-steel sm:text-5xl lg:text-6xl lg:whitespace-nowrap">
+          {platformIntro.lineTwo}
         </p>
       </Container>
 

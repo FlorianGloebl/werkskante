@@ -129,8 +129,10 @@ export interface PlatformUnit {
   navLabel: string;
   href: string;
   icon: string;
+  image: string;
   claim: string;
   description: string;
+  highlights: string[];
   ctaLabel: string;
   sortOrder: number;
   visible: boolean;
