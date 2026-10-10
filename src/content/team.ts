@@ -16,17 +16,10 @@ export const team: TeamMember[] = [
   {
     id: "andreas-wellenhofer",
     name: "Andreas Wellenhofer",
-    role: "Sicherheitsfachkraft, Industrieerfahrung, Arbeitssicherheit & Schulungen",
+    role: "Sicherheitsingenieur · Arbeitssicherheit",
     description:
-      "Andreas ist Sicherheitsfachkraft und bringt den Blick aus dem industriellen Alltag ein: Arbeitsschutz, PSA-Auswahl, Maschinensicherheit und Schulungen – nah an der Arbeit, nah an den Menschen, nah an der Umsetzung. Er ist Ihr fester Ansprechpartner bei Werkskante.",
-    focusAreas: [
-      "Sicherheitsfachkraft",
-      "Arbeitsschutz",
-      "PSA-Auswahl",
-      "Maschinensicherheit",
-      "Schulungen",
-      "Praxis vor Ort",
-    ],
+      "Andreas ist Sicherheitsingenieur und bringt den Blick aus dem industriellen Alltag ein: Arbeitsschutz, PSA-Auswahl und Maschinensicherheit – nah an der Arbeit, nah an den Menschen, nah an der Umsetzung. Er ist Ihr fester Ansprechpartner bei Werkskante.",
+    focusAreas: ["Sicherheitsingenieur", "Arbeitsschutz", "PSA-Auswahl", "Maschinensicherheit", "Praxis vor Ort"],
     image: assetPath("/team/andi.png"),
     sortOrder: 1,
     visible: true,
