@@ -1,5 +1,4 @@
 import type { PlatformUnit } from "@/types/content";
-import { assetPath } from "@/lib/basePath";
 
 // Dach-Claim der Hub-Seite ("/") — bewusst unabhängig von siteSettings, damit
 // die Beratungsseite (/arbeitssicherheit, nutzt siteSettings.mainClaim/tagline
@@ -9,7 +8,7 @@ import { assetPath } from "@/lib/basePath";
 export const platformIntro = {
   eyebrow: "Werkskante",
   lineOne: "Wir beraten den Mittelstand.",
-  lineTwo: "Wir begleiten Gründer:innen.",
+  lineTwo: "Und begleiten Gründer:innen.",
   closingTitle: "Nicht sicher, wo Sie hingehören?",
   closingDescription: "Kurze Nachricht genügt – wir ordnen gemeinsam ein, wo Sie am besten aufgehoben sind.",
 };
@@ -23,7 +22,6 @@ export const platformUnits: PlatformUnit[] = [
     navLabel: "Arbeitssicherheit",
     href: "/arbeitssicherheit",
     icon: "shield",
-    image: assetPath("/images/hero-industrial-edge.jpg"),
     claim: "Arbeitsschutz und Arbeitssicherheit für den produzierenden Mittelstand.",
     description: "Rechtlich passend, praktisch tragfähig, vor Ort erarbeitet.",
     highlights: [
@@ -41,7 +39,6 @@ export const platformUnits: PlatformUnit[] = [
     navLabel: "Gründung",
     href: "/start",
     icon: "torch",
-    image: assetPath("/team/florian-gloebl.jpg"),
     claim: "Für talentierte Jungunternehmer:innen und Gründer:innen.",
     description: "Persönliche Begleitung mit Erfahrung, Netzwerk und ehrlichem Feedback.",
     highlights: [
