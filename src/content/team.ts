@@ -5,9 +5,10 @@ export const team: TeamMember[] = [
   {
     id: "florian-gloebl",
     name: "Florian Glöbl",
-    role: "Gründer · Vertrieb",
-    description: "Florian hat Werkskante gegründet und verantwortet den Vertrieb.",
-    focusAreas: ["Gründer", "Vertrieb"],
+    role: "Gründer · Wertschöpfung & Vertrieb",
+    description:
+      "Florian hat Werkskante gegründet. Sein Blick ist der auf die Wertschöpfung: Arbeitssicherheit soll den Betrieb voranbringen, nicht bremsen. Er verantwortet den Vertrieb und sorgt dafür, dass aus dem ersten Gespräch ein Ergebnis wird, das im Alltag trägt.",
+    focusAreas: ["Gründer", "Wertschöpfung", "Vertrieb"],
     image: assetPath("/team/florian-gloebl.jpg"),
     sortOrder: 2,
     visible: true,
@@ -17,7 +18,7 @@ export const team: TeamMember[] = [
     name: "Andreas Wellenhofer",
     role: "Sicherheitsfachkraft, Industrieerfahrung, Arbeitssicherheit & Schulungen",
     description:
-      "Andreas ist Sicherheitsfachkraft und bringt den Blick aus dem industriellen Alltag ein – nah an der Arbeit, nah an den Menschen, nah an der Umsetzung. Er ist Ihr fester Ansprechpartner bei Werkskante.",
+      "Andreas ist Sicherheitsfachkraft und bringt den Blick aus dem industriellen Alltag ein: Arbeitsschutz, PSA-Auswahl, Maschinensicherheit und Schulungen – nah an der Arbeit, nah an den Menschen, nah an der Umsetzung. Er ist Ihr fester Ansprechpartner bei Werkskante.",
     focusAreas: [
       "Sicherheitsfachkraft",
       "Arbeitsschutz",

@@ -55,18 +55,6 @@ export function Team() {
                 <p className="mt-1 text-sm font-semibold text-accent">{member.role}</p>
               </div>
               <p className="leading-relaxed text-ink/70">{member.description}</p>
-              <p className="flex flex-wrap gap-x-2 gap-y-1 border-t border-ink/10 pt-4 text-xs font-semibold tracking-wide text-ink/45 uppercase">
-                {member.focusAreas.map((area, i) => (
-                  <span key={area} className="flex items-center gap-2">
-                    {i > 0 && (
-                      <span className="text-ink/20" aria-hidden="true">
-                        ·
-                      </span>
-                    )}
-                    {area}
-                  </span>
-                ))}
-              </p>
               </div>
             );
           })}
