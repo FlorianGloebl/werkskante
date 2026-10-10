@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { StartHero } from "@/components/sections/start/StartHero";
+import { StartAbout } from "@/components/sections/start/StartAbout";
 import { StartOffer } from "@/components/sections/start/StartOffer";
 import { StartProcess } from "@/components/sections/start/StartProcess";
 import { StartAudience } from "@/components/sections/start/StartAudience";
@@ -15,6 +16,7 @@ export default function StartPage() {
   return (
     <>
       <StartHero />
+      <StartAbout />
       <StartOffer />
       <StartProcess />
       <StartAudience />

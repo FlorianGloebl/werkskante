@@ -106,6 +106,11 @@ export interface StartPageContent {
   heroSubtitle: string;
   heroCtaLabel: string;
   positioningParagraph: string;
+  aboutEyebrow: string;
+  aboutQuote: string;
+  aboutParagraph: string;
+  aboutRoles: string[];
+  mentorsNote: string;
   offerPoints: StartOfferPoint[];
   processSteps: StartProcessStep[];
   audienceTitle: string;

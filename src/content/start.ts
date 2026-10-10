@@ -19,6 +19,19 @@ export const startContent: StartPageContent = {
   positioningParagraph:
     "Ich bin kein stiller Gesellschafter im Hintergrund. Ich bin ein leidenschaftlicher Netzwerker, der mit anpackt – mit Erfahrung, ehrlichem Feedback und Kontakten, die sonst verschlossen blieben.",
 
+  aboutEyebrow: "Wer dich begleitet",
+  aboutQuote:
+    "Ich weiß, wie sich der Schritt in die Selbstständigkeit anfühlt – weil ich ihn selbst gegangen bin.",
+  aboutParagraph:
+    "Fast 16 Jahre war ich in einem mittelständischen Maschinenbau-Unternehmen – zuletzt in der Geschäftsleitung. Heute stehe ich selbst mehrfach auf eigenen Beinen: mit meiner Beratung, als Mitgründer eines Unternehmens für Schweizer KMU und mit Werkskante. Diese Erfahrung – und mein Netzwerk – gebe ich jetzt an dich weiter.",
+  aboutRoles: [
+    "Glöbl & Partner — Beratung für den Mittelstand",
+    "Coolab AG — Mitgründer",
+    "Werkskante — Inhaber",
+  ],
+  mentorsNote:
+    "Vier Menschen haben mich auf meinem eigenen Weg geprägt und gefördert. Was ich von ihnen gelernt habe, gebe ich jetzt weiter.",
+
   offerPoints: [
     {
       id: "angebot-schaerfen",
