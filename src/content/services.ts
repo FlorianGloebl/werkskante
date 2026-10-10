@@ -373,6 +373,8 @@ export const businessUnits: BusinessUnit[] = [
     services: ["schulungen", "prozesse-wertschoepfung"],
     teamMemberIds: ["florian-gloebl", "andreas-wellenhofer"],
     sortOrder: 3,
-    visible: true,
+    // Auf Wunsch vorerst nicht auf der Arbeitssicherheit-Seite zeigen – Daten
+    // bleiben erhalten.
+    visible: false,
   },
 ];
